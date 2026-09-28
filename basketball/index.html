@@ -5816,8 +5816,7 @@ const GameScene = {
     Toast.draw(g);
     Hand.draw(g);
     Dialog.draw(g);
-    drawCornerButtons(g);
-    UI.button(g, 'home', W - 75, 3, 22, 17, { icon: 'homeIcon', color: C.navy, iconOutline: false, onTap: () => this.askHome() });
+    drawCornerButtons(g, { home: () => this.askHome() });
     if (this.final) this.drawFinal(g);
   },
   tap(x, y) {
