@@ -7,4 +7,5 @@ Retro 8-bit games that teach young kids (about age 6) the rules of a sport. Coac
 
 - [Super Tee Ball](tee-ball/index.html): tee ball and baseball basics.
 - [Super Soccer](soccer/index.html): dribbling, scoring, in and out, fair play, passing and defending, then a 4-on-4 match.
+- [Super Football](football/index.html): which way to run, hiking and handoffs, pulling flags, downs, passing and catching, and touchdowns, then a 5-on-5 flag football game.
 - [Super Basketball](basketball/index.html): dribbling, traveling and double dribble, shooting and free throws, defense and fouls, then a 3-on-3 game.
