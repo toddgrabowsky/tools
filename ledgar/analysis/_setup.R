@@ -38,3 +38,15 @@ write_result <- function(x, name) {
   cli::cli_alert_success("Wrote {.path {path}} ({nrow(x)} rows)")
   invisible(x)
 }
+
+# -- Decisions carried between scripts ----------------------------------------
+# These are the *outputs* of 08_ablation.R and 09_tuning.R, recorded in one
+# place so every later script uses the same pipeline. 10_select_refit.R
+# asserts that chosen_model_name() really is the cross-validation winner.
+
+#' Feature set selected by the ablation study (08).
+chosen_spec <- function() {
+  feature_spec(word_ngram = c(1, 2), head_ngram = c(1, 2), head_words = 20,
+               weights = c(head = 0.5), min_doc_count = 2, sublinear_tf = TRUE, use_idf = TRUE,
+               lowercase = TRUE, mask_numbers = TRUE)
+}
