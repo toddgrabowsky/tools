@@ -1,0 +1,4 @@
+split,url,file,bytes,sha256,rows
+train,https://huggingface.co/api/datasets/coastalcph/lex_glue/parquet/ledgar/train/0.parquet,data/raw/train.parquet,20897973,e2901d9e019f5652dadda839d488155c681e50b90bd33f00574949418827867d,60000
+validation,https://huggingface.co/api/datasets/coastalcph/lex_glue/parquet/ledgar/validation/0.parquet,data/raw/validation.parquet,3439104,55ef0deada1ed75bbf13c68fdd1c1a1ebfa5b09176d5e68b92499234f51d6c9f,10000
+test,https://huggingface.co/api/datasets/coastalcph/lex_glue/parquet/ledgar/test/0.parquet,data/raw/test.parquet,3313508,af9ed0ec09545d39449ffddca3996a1a7774e2bd0a9d6fc09d4e9dd067892a7a,10000
