@@ -15,10 +15,10 @@ plot_target_shuffle <- function(x, metric = "accuracy", bins = 30) {
     ggplot2::geom_vline(xintercept = obs, colour = col$categorical[["blue"]], linewidth = 0.9) +
     ggplot2::annotate("text", x = obs, y = Inf, vjust = 1.6, hjust = 1.08, size = 3.3,
                       colour = col$categorical[["blue"]],
-                      label = sprintf("observed %.3f", obs)) +
+                      label = sprintf("observed %.1f%%", 100 * obs)) +
     ggplot2::annotate("text", x = max(null), y = Inf, vjust = 3.4, hjust = 0, size = 3.1,
                       colour = col$ink2,
-                      label = sprintf("  shuffled labels:\n  mean %.4f, max %.4f", mean(null), max(null))) +
+                      label = sprintf("  shuffled labels:\n  mean %.1f%%, max %.1f%%", 100 * mean(null), 100 * max(null))) +
     ggplot2::scale_x_continuous(labels = scales::label_percent(accuracy = 1)) +
     ggplot2::scale_y_continuous(expand = ggplot2::expansion(mult = c(0, 0.08))) +
     ggplot2::labs(
@@ -72,6 +72,8 @@ plot_confusion <- function(truth, estimate, n_classes = 30) {
     theme_provision(base_size = 9, grid = "none") +
     ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, hjust = 1, vjust = 0.5),
                    axis.line = ggplot2::element_blank(),
+                   legend.position = "bottom",
+                   legend.title = ggplot2::element_text(vjust = 0.9),
                    legend.key.width = ggplot2::unit(1.4, "cm"),
                    legend.key.height = ggplot2::unit(0.25, "cm"))
 }
