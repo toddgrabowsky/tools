@@ -50,3 +50,7 @@ chosen_spec <- function() {
                weights = c(head = 0.5), min_doc_count = 2, sublinear_tf = TRUE, use_idf = TRUE,
                lowercase = TRUE, mask_numbers = TRUE)
 }
+
+#' Model selected by cross-validation in 09_tuning.R.
+chosen_model_name <- function() "Linear SVM (one-vs-rest) [C=1]"
+chosen_model <- function() list(engine = "svm", cost = 1)
