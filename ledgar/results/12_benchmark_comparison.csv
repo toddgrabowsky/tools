@@ -1,0 +1,7 @@
+model,accuracy,macro_f1,source
+TF-IDF + SVM (LexGLUE),0.872,0.824,published
+BERT (LexGLUE),0.876,0.818,published
+Legal-BERT (LexGLUE),0.882,0.83,published
+RoBERTa-large (LexGLUE),0.886,0.836,published
+This work: TF-IDF + linear SVM (train + validation),0.8934,0.8475306303000204,this work
+"This work: same pipeline, train split only",0.8866,0.8360628302407067,this work

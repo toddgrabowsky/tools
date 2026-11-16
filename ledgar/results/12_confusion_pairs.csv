@@ -1,0 +1,511 @@
+truth,estimate,n,share_of_truth
+Applicable Laws,Governing Laws,34,0.6415094339622641
+Definitions,Defined Terms,17,0.14285714285714285
+Integration,Entire Agreements,17,0.288135593220339
+Modifications,Amendments,17,0.3090909090909091
+No Waivers,Waivers,17,0.20238095238095238
+Defined Terms,Definitions,16,0.2857142857142857
+Tax Withholdings,Withholdings,15,0.2
+Authorizations,Authority,14,0.15555555555555556
+Miscellaneous,Entire Agreements,12,0.1518987341772152
+Successors,Binding Effects,12,0.125
+Warranties,Survival,12,0.12371134020618557
+Indemnity,Indemnifications,11,0.3793103448275862
+General,Payments,10,0.04926108374384237
+Taxes,Withholdings,10,0.05405405405405406
+Successors,Assignments,9,0.09375
+Waivers,No Waivers,9,0.05421686746987952
+Enforceability,Severability,8,0.17777777777777778
+Representations,Warranties,8,0.0851063829787234
+Withholdings,Tax Withholdings,8,0.07476635514018691
+Assignments,Successors,7,0.035897435897435895
+Authority,Authorizations,7,0.11290322580645161
+Benefits,Assignments,7,0.08641975308641975
+General,Vesting,7,0.034482758620689655
+Payments,Taxes,7,0.05555555555555555
+Warranties,Representations,7,0.07216494845360824
+Jurisdictions,Governing Laws,6,0.20689655172413793
+Miscellaneous,Counterparts,6,0.0759493670886076
+Miscellaneous,Governing Laws,6,0.0759493670886076
+Positions,Employment,6,0.1875
+Terminations,Terms,6,0.05084745762711865
+Consents,Approvals,5,0.06172839506172839
+Costs,Expenses,5,0.3333333333333333
+Death,Disability,5,0.07575757575757576
+Disability,Death,5,0.10416666666666667
+Duties,Positions,5,0.08620689655172414
+General,Terminations,5,0.024630541871921183
+Positions,Duties,5,0.15625
+Representations,Confidentiality,5,0.05319148936170213
+Specific Performance,Remedies,5,0.11627906976744186
+Submission To Jurisdiction,Consent To Jurisdiction,5,0.1724137931034483
+Taxes,Tax Withholdings,5,0.02702702702702703
+Terms,Terminations,5,0.028409090909090908
+Venues,Governing Laws,5,0.25
+Agreements,Entire Agreements,4,0.08333333333333333
+Amendments,Modifications,4,0.017857142857142856
+Applicable Laws,Compliance With Laws,4,0.07547169811320754
+Assignments,Binding Effects,4,0.020512820512820513
+Construction,Interpretations,4,0.06349206349206349
+Construction,Severability,4,0.06349206349206349
+Enforceability,Authorizations,4,0.08888888888888889
+Enforcements,Remedies,4,0.09523809523809523
+Expenses,Fees,4,0.02185792349726776
+Fees,Expenses,4,0.0449438202247191
+General,Forfeitures,4,0.019704433497536946
+General,Interpretations,4,0.019704433497536946
+General,Terms,4,0.019704433497536946
+Governing Laws,Applicable Laws,4,0.006872852233676976
+Interpretations,Construction,4,0.05263157894736842
+Jurisdictions,Submission To Jurisdiction,4,0.13793103448275862
+Remedies,Specific Performance,4,0.03389830508474576
+Representations,No Conflicts,4,0.0425531914893617
+Terms,General,4,0.022727272727272728
+Adjustments,Payments,3,0.03409090909090909
+Agreements,Confidentiality,3,0.0625
+Amendments,Entire Agreements,3,0.013392857142857142
+Authority,Binding Effects,3,0.04838709677419355
+Benefits,Binding Effects,3,0.037037037037037035
+Binding Effects,Assignments,3,0.023809523809523808
+Binding Effects,Authority,3,0.023809523809523808
+Binding Effects,Enforceability,3,0.023809523809523808
+Consent To Jurisdiction,Submission To Jurisdiction,3,0.09090909090909091
+Consents,No Conflicts,3,0.037037037037037035
+Construction,Entire Agreements,3,0.047619047619047616
+Cooperation,Further Assurances,3,0.036585365853658534
+Definitions,Interpretations,3,0.025210084033613446
+Disclosures,Confidentiality,3,0.030927835051546393
+Effective Dates,Terms,3,0.04054054054054054
+Employment,Duties,3,0.06382978723404255
+Existence,Organizations,3,0.07142857142857142
+General,Confidentiality,3,0.014778325123152709
+General,Duties,3,0.014778325123152709
+General,Further Assurances,3,0.014778325123152709
+General,Miscellaneous,3,0.014778325123152709
+General,Participations,3,0.014778325123152709
+General,Powers,3,0.014778325123152709
+General,Tax Withholdings,3,0.014778325123152709
+Governing Laws,Severability,3,0.005154639175257732
+Governing Laws,Venues,3,0.005154639175257732
+Modifications,Entire Agreements,3,0.05454545454545454
+No Conflicts,Representations,3,0.028846153846153848
+No Defaults,No Conflicts,3,0.047619047619047616
+Notices,General,3,0.0071090047393364926
+Payments,Vesting,3,0.023809523809523808
+Tax Withholdings,Taxes,3,0.04
+Terminations,General,3,0.025423728813559324
+Titles,Duties,3,0.06666666666666667
+Agreements,Defined Terms,2,0.041666666666666664
+Agreements,Enforceability,2,0.041666666666666664
+Agreements,Representations,2,0.041666666666666664
+Amendments,Interpretations,2,0.008928571428571428
+Applicable Laws,Defined Terms,2,0.03773584905660377
+Approvals,Consents,2,0.07692307692307693
+Approvals,Litigations,2,0.07692307692307693
+Assignments,Intellectual Property,2,0.010256410256410256
+Assigns,Binding Effects,2,0.5
+Authority,Arbitration,2,0.03225806451612903
+Authorizations,Enforceability,2,0.022222222222222223
+Binding Effects,Effectiveness,2,0.015873015873015872
+Binding Effects,Interpretations,2,0.015873015873015872
+Binding Effects,Successors,2,0.015873015873015872
+Capitalization,Subsidiaries,2,0.031746031746031744
+Change In Control,Adjustments,2,0.022988505747126436
+Compliance With Laws,Taxes,2,0.009615384615384616
+Consents,Assignments,2,0.024691358024691357
+Construction,General,2,0.031746031746031744
+Construction,Headings,2,0.031746031746031744
+Cooperation,Compliance With Laws,2,0.024390243902439025
+Definitions,Change In Control,2,0.01680672268907563
+Disclosures,Representations,2,0.020618556701030927
+Disclosures,Warranties,2,0.020618556701030927
+Duties,Amendments,2,0.034482758620689655
+Effective Dates,Amendments,2,0.02702702702702703
+Effectiveness,Effective Dates,2,0.06451612903225806
+Effectiveness,Survival,2,0.06451612903225806
+Employment,Confidentiality,2,0.0425531914893617
+Employment,Positions,2,0.0425531914893617
+Employment,Terms,2,0.0425531914893617
+Enforceability,Representations,2,0.044444444444444446
+Enforcements,Arbitration,2,0.047619047619047616
+Enforcements,Expenses,2,0.047619047619047616
+Enforcements,Specific Performance,2,0.047619047619047616
+Expenses,Payments,2,0.01092896174863388
+Fees,Costs,2,0.02247191011235955
+Further Assurances,Cooperation,2,0.013157894736842105
+General,Assignments,2,0.009852216748768473
+General,Compliance With Laws,2,0.009852216748768473
+General,Releases,2,0.009852216748768473
+General,Use Of Proceeds,2,0.009852216748768473
+Interests,Payments,2,0.047619047619047616
+Interpretations,General,2,0.02631578947368421
+Interpretations,Governing Laws,2,0.02631578947368421
+Interpretations,Headings,2,0.02631578947368421
+Interpretations,Severability,2,0.02631578947368421
+Jurisdictions,Venues,2,0.06896551724137931
+Liens,Titles,2,0.04081632653061224
+Miscellaneous,Amendments,2,0.02531645569620253
+Miscellaneous,General,2,0.02531645569620253
+Miscellaneous,Remedies,2,0.02531645569620253
+Modifications,Compliance With Laws,2,0.03636363636363636
+No Defaults,Compliance With Laws,2,0.031746031746031744
+No Waivers,Remedies,2,0.023809523809523808
+Organizations,Authority,2,0.0273972602739726
+Organizations,Enforceability,2,0.0273972602739726
+Payments,Interests,2,0.015873015873015872
+Payments,Notices,2,0.015873015873015872
+Powers,Organizations,2,0.15384615384615385
+Remedies,Enforcements,2,0.01694915254237288
+Remedies,Expenses,2,0.01694915254237288
+Representations,Brokers,2,0.02127659574468085
+Sales,General,2,0.044444444444444446
+Sales,Payments,2,0.044444444444444446
+Tax Withholdings,Payments,2,0.02666666666666667
+Taxes,Expenses,2,0.010810810810810811
+Taxes,Representations,2,0.010810810810810811
+Terminations,Amendments,2,0.01694915254237288
+Terminations,Remedies,2,0.01694915254237288
+Terms,Survival,2,0.011363636363636364
+Terms,Vesting,2,0.011363636363636364
+Use Of Proceeds,Payments,2,0.016666666666666666
+Venues,Jurisdictions,2,0.1
+Venues,Submission To Jurisdiction,2,0.1
+Vesting,General,2,0.022988505747126436
+Waivers,Amendments,2,0.012048192771084338
+Waivers,Waiver Of Jury Trials,2,0.012048192771084338
+Warranties,Assignments,2,0.020618556701030927
+Warranties,Confidentiality,2,0.020618556701030927
+Warranties,Titles,2,0.020618556701030927
+Adjustments,Change In Control,1,0.011363636363636364
+Adjustments,General,1,0.011363636363636364
+Adjustments,Governing Laws,1,0.011363636363636364
+Adjustments,Insurances,1,0.011363636363636364
+Agreements,Amendments,1,0.020833333333333332
+Agreements,Compliance With Laws,1,0.020833333333333332
+Agreements,Disclosures,1,0.020833333333333332
+Agreements,Further Assurances,1,0.020833333333333332
+Agreements,General,1,0.020833333333333332
+Agreements,No Conflicts,1,0.020833333333333332
+Agreements,No Defaults,1,0.020833333333333332
+Agreements,Powers,1,0.020833333333333332
+Agreements,Remedies,1,0.020833333333333332
+Agreements,Severability,1,0.020833333333333332
+Agreements,Taxes,1,0.020833333333333332
+Agreements,Warranties,1,0.020833333333333332
+Amendments,Agreements,1,0.004464285714285714
+Amendments,Compliance With Laws,1,0.004464285714285714
+Amendments,Effective Dates,1,0.004464285714285714
+Amendments,Enforceability,1,0.004464285714285714
+Amendments,Integration,1,0.004464285714285714
+Amendments,Miscellaneous,1,0.004464285714285714
+Amendments,Payments,1,0.004464285714285714
+Amendments,Waivers,1,0.004464285714285714
+Anti-Corruption Laws,Sanctions,1,0.043478260869565216
+Applicable Laws,Arbitration,1,0.018867924528301886
+Applicable Laws,Construction,1,0.018867924528301886
+Applicable Laws,Representations,1,0.018867924528301886
+Approvals,Authorizations,1,0.038461538461538464
+Approvals,Expenses,1,0.038461538461538464
+Approvals,Further Assurances,1,0.038461538461538464
+Approvals,Miscellaneous,1,0.038461538461538464
+Arbitration,Waiver Of Jury Trials,1,0.02127659574468085
+Assignments,Change In Control,1,0.005128205128205128
+Assignments,Consents,1,0.005128205128205128
+Assignments,Cooperation,1,0.005128205128205128
+Assignments,Fees,1,0.005128205128205128
+Assignments,General,1,0.005128205128205128
+Assignments,Payments,1,0.005128205128205128
+Assigns,Assignments,1,0.25
+Authority,Enforceability,1,0.016129032258064516
+Authority,Fees,1,0.016129032258064516
+Authority,Intellectual Property,1,0.016129032258064516
+Authority,No Conflicts,1,0.016129032258064516
+Authority,Powers,1,0.016129032258064516
+Authority,Representations,1,0.016129032258064516
+Authority,Taxes,1,0.016129032258064516
+Authorizations,Amendments,1,0.011111111111111112
+Authorizations,Approvals,1,0.011111111111111112
+Authorizations,Assignments,1,0.011111111111111112
+Authorizations,Compliance With Laws,1,0.011111111111111112
+Authorizations,Enforcements,1,0.011111111111111112
+Authorizations,General,1,0.011111111111111112
+Authorizations,No Defaults,1,0.011111111111111112
+Base Salary,Vesting,1,0.008928571428571428
+Benefits,Base Salary,1,0.012345679012345678
+Benefits,Change In Control,1,0.012345679012345678
+Benefits,Death,1,0.012345679012345678
+Benefits,Effective Dates,1,0.012345679012345678
+Benefits,Expenses,1,0.012345679012345678
+Benefits,Remedies,1,0.012345679012345678
+Benefits,Waivers,1,0.012345679012345678
+Benefits,Withholdings,1,0.012345679012345678
+Binding Effects,Arbitration,1,0.007936507936507936
+Binding Effects,Benefits,1,0.007936507936507936
+Binding Effects,Effective Dates,1,0.007936507936507936
+Binding Effects,Entire Agreements,1,0.007936507936507936
+Binding Effects,Miscellaneous,1,0.007936507936507936
+Binding Effects,Releases,1,0.007936507936507936
+Change In Control,Cooperation,1,0.011494252873563218
+Change In Control,Definitions,1,0.011494252873563218
+Change In Control,General,1,0.011494252873563218
+Compliance With Laws,Duties,1,0.004807692307692308
+Compliance With Laws,General,1,0.004807692307692308
+Compliance With Laws,Insurances,1,0.004807692307692308
+Compliance With Laws,Use Of Proceeds,1,0.004807692307692308
+Confidentiality,Non-Disparagement,1,0.005988023952095809
+Consent To Jurisdiction,Governing Laws,1,0.030303030303030304
+Consent To Jurisdiction,Jurisdictions,1,0.030303030303030304
+Consent To Jurisdiction,Survival,1,0.030303030303030304
+Consent To Jurisdiction,Venues,1,0.030303030303030304
+Consents,Amendments,1,0.012345679012345678
+Consents,Benefits,1,0.012345679012345678
+Consents,General,1,0.012345679012345678
+Consents,Notices,1,0.012345679012345678
+Consents,Participations,1,0.012345679012345678
+Construction,Governing Laws,1,0.015873015873015872
+Cooperation,Approvals,1,0.012195121951219513
+Cooperation,Financial Statements,1,0.012195121951219513
+Cooperation,Non-Disparagement,1,0.012195121951219513
+Counterparts,Amendments,1,0.0020408163265306124
+Defined Terms,Positions,1,0.017857142857142856
+Defined Terms,Terms,1,0.017857142857142856
+Definitions,Confidentiality,1,0.008403361344537815
+Definitions,General,1,0.008403361344537815
+Definitions,Insurances,1,0.008403361344537815
+Definitions,Intellectual Property,1,0.008403361344537815
+Disability,Benefits,1,0.020833333333333332
+Disability,Effective Dates,1,0.020833333333333332
+Disability,Insurances,1,0.020833333333333332
+Disability,Payments,1,0.020833333333333332
+Disability,Vesting,1,0.020833333333333332
+Disclosures,Financial Statements,1,0.010309278350515464
+Disclosures,General,1,0.010309278350515464
+Disclosures,Participations,1,0.010309278350515464
+Duties,Assignments,1,0.017241379310344827
+Duties,Remedies,1,0.017241379310344827
+Duties,Taxes,1,0.017241379310344827
+Effective Dates,Benefits,1,0.013513513513513514
+Effective Dates,Closings,1,0.013513513513513514
+Effective Dates,Effectiveness,1,0.013513513513513514
+Effective Dates,Financial Statements,1,0.013513513513513514
+Effective Dates,Payments,1,0.013513513513513514
+Effectiveness,Binding Effects,1,0.03225806451612903
+Effectiveness,Counterparts,1,0.03225806451612903
+Effectiveness,Miscellaneous,1,0.03225806451612903
+Effectiveness,Modifications,1,0.03225806451612903
+Employment,Change In Control,1,0.02127659574468085
+Employment,General,1,0.02127659574468085
+Employment,Tax Withholdings,1,0.02127659574468085
+Enforceability,Arbitration,1,0.022222222222222223
+Enforceability,Binding Effects,1,0.022222222222222223
+Enforceability,Effective Dates,1,0.022222222222222223
+Enforcements,General,1,0.023809523809523808
+Enforcements,Interests,1,0.023809523809523808
+Enforcements,Interpretations,1,0.023809523809523808
+Enforcements,No Waivers,1,0.023809523809523808
+Enforcements,Severability,1,0.023809523809523808
+Entire Agreements,Amendments,1,0.0026595744680851063
+Entire Agreements,Change In Control,1,0.0026595744680851063
+Entire Agreements,Counterparts,1,0.0026595744680851063
+Entire Agreements,Integration,1,0.0026595744680851063
+Entire Agreements,Miscellaneous,1,0.0026595744680851063
+Entire Agreements,Survival,1,0.0026595744680851063
+Erisa,No Defaults,1,0.017241379310344827
+Erisa,Warranties,1,0.017241379310344827
+Existence,Insurances,1,0.023809523809523808
+Existence,Notices,1,0.023809523809523808
+Existence,Qualifications,1,0.023809523809523808
+Existence,Terms,1,0.023809523809523808
+Expenses,Adjustments,1,0.00546448087431694
+Expenses,Change In Control,1,0.00546448087431694
+Expenses,Costs,1,0.00546448087431694
+Expenses,Definitions,1,0.00546448087431694
+Expenses,Further Assurances,1,0.00546448087431694
+Fees,Cooperation,1,0.011235955056179775
+Fees,Indemnifications,1,0.011235955056179775
+Fees,Interests,1,0.011235955056179775
+Fees,Terms,1,0.011235955056179775
+Financial Statements,Amendments,1,0.012195121951219513
+Forfeitures,Disability,1,0.019230769230769232
+Forfeitures,General,1,0.019230769230769232
+Forfeitures,Terminations,1,0.019230769230769232
+Further Assurances,Records,1,0.006578947368421052
+Further Assurances,Releases,1,0.006578947368421052
+Further Assurances,Representations,1,0.006578947368421052
+General,Authorizations,1,0.0049261083743842365
+General,Capitalization,1,0.0049261083743842365
+General,Change In Control,1,0.0049261083743842365
+General,Construction,1,0.0049261083743842365
+General,Disability,1,0.0049261083743842365
+General,Effective Dates,1,0.0049261083743842365
+General,Fees,1,0.0049261083743842365
+General,Headings,1,0.0049261083743842365
+General,Insurances,1,0.0049261083743842365
+General,No Waivers,1,0.0049261083743842365
+General,Notices,1,0.0049261083743842365
+General,Remedies,1,0.0049261083743842365
+General,Successors,1,0.0049261083743842365
+General,Taxes,1,0.0049261083743842365
+General,Waivers,1,0.0049261083743842365
+General,Withholdings,1,0.0049261083743842365
+Governing Laws,Arbitration,1,0.001718213058419244
+Governing Laws,Interpretations,1,0.001718213058419244
+Governing Laws,Jurisdictions,1,0.001718213058419244
+Governing Laws,Miscellaneous,1,0.001718213058419244
+Headings,Construction,1,0.004545454545454545
+Headings,Miscellaneous,1,0.004545454545454545
+Indemnifications,Costs,1,0.006578947368421052
+Indemnifications,Indemnity,1,0.006578947368421052
+Indemnifications,Insurances,1,0.006578947368421052
+Indemnifications,Taxes,1,0.006578947368421052
+Indemnity,Severability,1,0.034482758620689655
+Insurances,Cooperation,1,0.007518796992481203
+Insurances,Indemnifications,1,0.007518796992481203
+Insurances,Taxes,1,0.007518796992481203
+Integration,Counterparts,1,0.01694915254237288
+Integration,Miscellaneous,1,0.01694915254237288
+Integration,Representations,1,0.01694915254237288
+Intellectual Property,Confidentiality,1,0.015625
+Interests,Expenses,1,0.023809523809523808
+Interests,Remedies,1,0.023809523809523808
+Interpretations,Amendments,1,0.013157894736842105
+Interpretations,Authority,1,0.013157894736842105
+Interpretations,Binding Effects,1,0.013157894736842105
+Interpretations,Definitions,1,0.013157894736842105
+Interpretations,Warranties,1,0.013157894736842105
+Jurisdictions,Arbitration,1,0.034482758620689655
+Jurisdictions,Consent To Jurisdiction,1,0.034482758620689655
+Liens,Amendments,1,0.02040816326530612
+Liens,Intellectual Property,1,0.02040816326530612
+Liens,Taxes,1,0.02040816326530612
+Litigations,Cooperation,1,0.007751937984496124
+Litigations,Expenses,1,0.007751937984496124
+Litigations,Jurisdictions,1,0.007751937984496124
+Litigations,Notices,1,0.007751937984496124
+Miscellaneous,Benefits,1,0.012658227848101266
+Miscellaneous,Binding Effects,1,0.012658227848101266
+Miscellaneous,Consents,1,0.012658227848101266
+Miscellaneous,Construction,1,0.012658227848101266
+Miscellaneous,Cooperation,1,0.012658227848101266
+Miscellaneous,Costs,1,0.012658227848101266
+Miscellaneous,Definitions,1,0.012658227848101266
+Miscellaneous,Effectiveness,1,0.012658227848101266
+Miscellaneous,Enforceability,1,0.012658227848101266
+Miscellaneous,Further Assurances,1,0.012658227848101266
+Miscellaneous,Indemnifications,1,0.012658227848101266
+Miscellaneous,Notices,1,0.012658227848101266
+Miscellaneous,Participations,1,0.012658227848101266
+Miscellaneous,Payments,1,0.012658227848101266
+Miscellaneous,Releases,1,0.012658227848101266
+Miscellaneous,Severability,1,0.012658227848101266
+Modifications,Governing Laws,1,0.01818181818181818
+Modifications,Integration,1,0.01818181818181818
+Modifications,Miscellaneous,1,0.01818181818181818
+Modifications,Waivers,1,0.01818181818181818
+No Conflicts,Authorizations,1,0.009615384615384616
+No Conflicts,Confidentiality,1,0.009615384615384616
+No Conflicts,Consents,1,0.009615384615384616
+No Conflicts,Entire Agreements,1,0.009615384615384616
+Notices,Adjustments,1,0.002369668246445498
+Notices,Compliance With Laws,1,0.002369668246445498
+Notices,Effective Dates,1,0.002369668246445498
+Notices,Payments,1,0.002369668246445498
+Notices,Subsidiaries,1,0.002369668246445498
+Participations,Assignments,1,0.014285714285714285
+Payments,Base Salary,1,0.007936507936507936
+Payments,Miscellaneous,1,0.007936507936507936
+Payments,Sales,1,0.007936507936507936
+Powers,Interpretations,1,0.07692307692307693
+Powers,No Waivers,1,0.07692307692307693
+Publicity,Amendments,1,0.023809523809523808
+Publicity,Non-Disparagement,1,0.023809523809523808
+Qualifications,Insurances,1,0.2
+Qualifications,Organizations,1,0.2
+Releases,Change In Control,1,0.016666666666666666
+Releases,Consents,1,0.016666666666666666
+Releases,Definitions,1,0.016666666666666666
+Releases,Effective Dates,1,0.016666666666666666
+Releases,Expenses,1,0.016666666666666666
+Releases,Waivers,1,0.016666666666666666
+Remedies,Arbitration,1,0.00847457627118644
+Remedies,Confidentiality,1,0.00847457627118644
+Remedies,General,1,0.00847457627118644
+Remedies,Governing Laws,1,0.00847457627118644
+Remedies,Interpretations,1,0.00847457627118644
+Representations,Assignments,1,0.010638297872340425
+Representations,Authority,1,0.010638297872340425
+Representations,Capitalization,1,0.010638297872340425
+Representations,Compliance With Laws,1,0.010638297872340425
+Representations,Entire Agreements,1,0.010638297872340425
+Representations,Interpretations,1,0.010638297872340425
+Representations,Releases,1,0.010638297872340425
+Representations,Solvency,1,0.010638297872340425
+Sales,Assignments,1,0.022222222222222223
+Sales,Expenses,1,0.022222222222222223
+Sales,Financial Statements,1,0.022222222222222223
+Sales,Indemnifications,1,0.022222222222222223
+Sales,Taxes,1,0.022222222222222223
+Severability,Construction,1,0.0024271844660194173
+Severability,Counterparts,1,0.0024271844660194173
+Severability,Litigations,1,0.0024271844660194173
+Severability,Taxes,1,0.0024271844660194173
+Severability,Waivers,1,0.0024271844660194173
+Solvency,No Defaults,1,0.015151515151515152
+Specific Performance,Enforcements,1,0.023255813953488372
+Specific Performance,No Waivers,1,0.023255813953488372
+Submission To Jurisdiction,Governing Laws,1,0.034482758620689655
+Submission To Jurisdiction,Jurisdictions,1,0.034482758620689655
+Submission To Jurisdiction,Miscellaneous,1,0.034482758620689655
+Subsidiaries,Change In Control,1,0.015873015873015872
+Subsidiaries,Further Assurances,1,0.015873015873015872
+Successors,Survival,1,0.010416666666666666
+Survival,Remedies,1,0.0045045045045045045
+Survival,Terminations,1,0.0045045045045045045
+Taxes,Adjustments,1,0.005405405405405406
+Taxes,Base Salary,1,0.005405405405405406
+Taxes,Defined Terms,1,0.005405405405405406
+Taxes,Liens,1,0.005405405405405406
+Taxes,Litigations,1,0.005405405405405406
+Terminations,Confidentiality,1,0.00847457627118644
+Terminations,Disability,1,0.00847457627118644
+Terminations,Releases,1,0.00847457627118644
+Terminations,Survival,1,0.00847457627118644
+Terminations,Vesting,1,0.00847457627118644
+Terms,Binding Effects,1,0.005681818181818182
+Terms,Construction,1,0.005681818181818182
+Terms,Duties,1,0.005681818181818182
+Terms,Effective Dates,1,0.005681818181818182
+Terms,Employment,1,0.005681818181818182
+Terms,Fees,1,0.005681818181818182
+Terms,Governing Laws,1,0.005681818181818182
+Terms,Headings,1,0.005681818181818182
+Terms,Indemnifications,1,0.005681818181818182
+Terms,Integration,1,0.005681818181818182
+Terms,Modifications,1,0.005681818181818182
+Terms,Payments,1,0.005681818181818182
+Titles,Construction,1,0.022222222222222223
+Titles,Interpretations,1,0.022222222222222223
+Titles,Positions,1,0.022222222222222223
+Titles,Warranties,1,0.022222222222222223
+Transactions With Affiliates,Subsidiaries,1,0.021739130434782608
+Vacations,Benefits,1,0.019230769230769232
+Venues,Applicable Laws,1,0.05
+Venues,Consents,1,0.05
+Vesting,Death,1,0.011494252873563218
+Vesting,Modifications,1,0.011494252873563218
+Vesting,Terms,1,0.011494252873563218
+Waiver Of Jury Trials,Governing Laws,1,0.009009009009009009
+Waiver Of Jury Trials,Jurisdictions,1,0.009009009009009009
+Waiver Of Jury Trials,Miscellaneous,1,0.009009009009009009
+Waivers,Arbitration,1,0.006024096385542169
+Waivers,Consents,1,0.006024096385542169
+Waivers,Enforceability,1,0.006024096385542169
+Waivers,Insurances,1,0.006024096385542169
+Waivers,Litigations,1,0.006024096385542169
+Waivers,Releases,1,0.006024096385542169
+Waivers,Taxes,1,0.006024096385542169
+Warranties,Agreements,1,0.010309278350515464
+Warranties,Cooperation,1,0.010309278350515464
+Withholdings,Amendments,1,0.009345794392523364
+Withholdings,Expenses,1,0.009345794392523364
+Withholdings,Taxes,1,0.009345794392523364
