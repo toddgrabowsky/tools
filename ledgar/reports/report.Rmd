@@ -1,0 +1,484 @@
+---
+title: "Classifying contract provisions: a LEDGAR study in R"
+output:
+  github_document:
+    toc: true
+    toc_depth: 2
+    html_preview: false
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+knitr::opts_knit$set(root.dir = normalizePath(".."))
+suppressPackageStartupMessages(library(tidyverse))
+invisible(Sys.setlocale("LC_CTYPE", "C.UTF-8"))
+```
+
+```{r load}
+res <- function(name) read_csv(file.path("results", paste0(name, ".csv")), show_col_types = FALSE)
+pct <- function(x, digits = 1) sprintf(paste0("%.", digits, "f%%"), 100 * x)
+pp <- function(x, digits = 1) sprintf(paste0("%+.", digits, "f pp"), 100 * x)   # signed change
+pts <- function(x, digits = 2) sprintf(paste0("%.", digits, "f pp"), 100 * x)   # unsigned spread
+# paths are relative to reports/, where the rendered report.md lives
+fig <- function(name) knitr::include_graphics(file.path("..", "figures", paste0(name, ".png")), error = FALSE)
+
+imb <- res("02_imbalance_summary")
+gof <- res("02_split_label_gof")
+len <- deframe(res("03_length_summary"))
+dup <- res("03_duplicate_summary")
+nn <- res("03_nn_similarity_summary")
+clog <- res("05_cleaning_log")
+base <- res("07_baseline_cv")
+screen <- res("08_screening_paired")
+wts <- res("08_weights_summary")
+conf <- res("08_confirmation")
+tuned <- res("09_tuning")
+best_fam <- res("09_best_per_family")
+cvval <- res("10_cv_vs_validation")
+dedup <- res("10_dedup_effect")
+shuf <- res("11_target_shuffle_summary")
+tm <- res("12_test_metrics")
+topk <- res("12_top_k_accuracy")
+pc <- res("12_per_class")
+cpairs <- res("12_confusion_pairs")
+sel <- res("12_selective_prediction")
+slices <- res("12_slices")
+rep_cv <- res("13_repeated_cv")
+grp <- res("13_grouped_cv")
+drift <- res("13_temporal_drift")
+curve <- res("13_learning_curve")
+bysim <- res("13_accuracy_by_similarity")
+bench <- res("12_benchmark_comparison")
+
+winner <- tuned$model[1]
+acc <- filter(tm, metric == "accuracy")
+f1 <- filter(tm, metric == "macro_f1")
+```
+
+## Summary
+
+**Task.** Assign each contract provision in LEDGAR (LexGLUE; 80,000 provisions
+from SEC filings) to one of 100 provision types.
+
+**Final model.** TF-IDF over word 1-2-grams plus a down-weighted block of
+n-grams from the first 20 words of the provision, fed to a one-vs-rest linear
+SVM with C = 1, trained on the cleaned train + validation splits.
+
+**Held-out test performance** (10,000 provisions, scored only after the model was frozen):
+
+| Metric | Estimate | 95% bootstrap interval |
+|---|---|---|
+| Accuracy (= micro-F1) | `r pct(acc$estimate)` | `r pct(acc$lower)` – `r pct(acc$upper)` |
+| Macro-F1 | `r pct(f1$estimate)` | `r pct(f1$lower)` – `r pct(f1$upper)` |
+| Top-3 accuracy | `r pct(topk$accuracy[topk$k == 3])` | |
+
+The published LexGLUE models are trained on the training split only. The same
+pipeline fitted that way scores `r pct(bench$accuracy[6])` accuracy and
+`r pct(bench$macro_f1[6])` macro-F1 on test, against 87.2 / 82.4 for LexGLUE's
+TF-IDF + SVM baseline and 88.6 / 83.6 for its best transformer
+(RoBERTa-large). A carefully tuned sparse linear model is therefore on par
+with the published transformer results on this task; differences of a few
+tenths of a point are inside the bootstrap interval.
+
+**Why the number can be trusted.**
+
+* *Target shuffling.* With labels permuted, the complete cross-validated
+  pipeline scores `r pct(shuf$null_mean[shuf$metric == "accuracy"])` accuracy on
+  average (maximum over `r shuf$n_perm[1]` permutations:
+  `r pct(shuf$null_max[shuf$metric == "accuracy"])`) against
+  `r pct(shuf$observed[shuf$metric == "accuracy"])` with the real labels on the
+  same sample: the pipeline cannot manufacture signal.
+* *Resampling.* 5-fold stratified CV, repeated with three fold assignments:
+  fold-to-fold SD `r pts(rep_cv$sd_between_folds[1])`, repeat-to-repeat SD
+  `r pts(rep_cv$sd_between_repeats[1])`.
+* *Two untouched hold-outs.* Model families rank the same way on the validation
+  split as in CV, and the test split was scored exactly once.
+
+**What limits it.**
+
+* The largest single sources of error are near-synonymous labels (Applicable
+  Laws vs Governing Laws, Definitions vs Defined Terms, …): the 20 most
+  confused pairs account for `r pct(sum(head(cpairs$n, 20)) / sum(cpairs$n), 0)`
+  of all test errors, and they are a property of the label scheme.
+* Performance depends on how familiar a provision looks. Test provisions with
+  a near-twin in the training data (cosine ≥ 0.95) are classified with
+  `r pct(last(bysim$accuracy))` accuracy; those with no close neighbour
+  (cosine < 0.4) with about
+  `r pct(weighted.mean(bysim$accuracy[1:2], bysim$n[1:2]))`.
+* The official splits are chronological and their label mix drifts. The same
+  train-only model scores `r pct(drift$accuracy[1])` in random-fold CV,
+  `r pct(drift$accuracy[2])` on validation and `r pct(drift$accuracy[3])` on
+  test, so there is no sign of degradation on later filings — but that is an
+  observation about the two periods this corpus covers, not a guarantee.
+
+## 1. Data
+
+LEDGAR (Tuggener et al., 2020) as packaged in LexGLUE (Chalkidis et al., 2022):
+`r format(60000 + 10000 + 10000, big.mark = ",")` provisions in three official
+splits (60,000 / 10,000 / 10,000), one label out of 100 per provision.
+`analysis/01_acquire.R` downloads the parquet files and records checksums.
+
+### Labels
+
+```{r}
+fig("02_label_counts")
+```
+
+Class sizes range from `r imb$smallest` to `r format(imb$largest, big.mark = ",")`
+training examples (`r round(imb$ratio)`×); the effective number of classes is
+`r round(imb$effective_classes)`. Always predicting the largest class would be
+right `r pct(imb$majority_baseline)` of the time. Accuracy alone would hide
+failures on small classes, so macro-F1 is reported throughout.
+
+```{r}
+fig("02_label_split_consistency")
+```
+
+The validation label mix is close to train, the test mix is not (χ² goodness
+of fit p = `r format(signif(gof$p_value[gof$split == "test"], 2), scientific = TRUE)`).
+LexGLUE splits LEDGAR by filing year, so this is drift over time. Whether it
+costs accuracy on later filings is tested in section 6 (it does not,
+measurably).
+
+### Text
+
+```{r, out.width = "70%"}
+fig("03_length_distribution")
+```
+
+Provisions are short (median `r len[["median"]]` words, 99th percentile
+`r round(len[["q99"]])`). Length varies systematically by class:
+
+```{r}
+fig("03_length_by_class")
+```
+
+```{r}
+fig("03_text_artefacts")
+```
+
+Numbers, section enumerators and typographic characters are common and carry
+no information about the provision type, which motivates digit masking and
+character repair in the cleaning step.
+
+### Duplicates and leakage
+
+There are no exact duplicate texts anywhere in the corpus. After masking
+digits, case and punctuation ("template" fingerprint), however:
+
+```{r}
+dup |> transmute(Check = check, Rows = n, Share = pct(share, 2)) |> knitr::kable()
+```
+
+```{r}
+fig("03_nearest_neighbour_similarity")
+```
+
+About `r pct(nn$share_ge_0.95[3], 0)` of test provisions have a near-identical
+twin (cosine ≥ 0.95) in train. The same is true *within* train, so this is a
+property of contract boilerplate rather than a flaw in the split, but it means
+part of any score reflects recall of boilerplate (quantified in section 6).
+
+### Class separability
+
+```{r}
+fig("04_umap_families")
+```
+
+```{r, out.width = "80%"}
+fig("04_confusable_pairs")
+```
+
+Boilerplate classes form isolated islands. The pairs with the most similar
+centroids are near-synonyms in the label scheme itself (Applicable Laws /
+Governing Laws, Defined Terms / Definitions, …). These set a ceiling that is a
+property of the labels, not of the model.
+
+## 2. Cleaning
+
+`provisionr::clean_corpus()` applies the decisions above to the **training
+split only** and logs each step:
+
+```{r}
+clog |> transmute(Step = step, `Rows removed` = rows_removed, `Rows left` = format(rows_left, big.mark = ",")) |> knitr::kable()
+```
+
+```{r, out.width = "75%"}
+fig("05_cleaning_effects")
+```
+
+Held-out rows are never dropped. Whether de-duplication helps was treated as an
+open question and tested on the validation split (section 4): accuracy
+`r pct(dedup$accuracy[2], 2)` with cleaned training data versus
+`r pct(dedup$accuracy[1], 2)` with raw, i.e. no measurable difference — the
+step is kept because it removes label noise and makes fold assignment honest,
+not because it buys accuracy.
+
+## 3. Features
+
+All features are learned inside each training fold by `fit_featurizer()` and
+applied with `bake_features()`. Candidate blocks: word n-gram TF-IDF, character
+n-gram TF-IDF, a "head" block (n-grams of the opening words only) and twelve
+dense surface statistics.
+
+```{r}
+fig("06_surface_statistics")
+```
+
+```{r, out.width = "75%"}
+fig("06_head_purity")
+```
+
+Each block shows class signal in isolation. Whether it *adds* signal on top of
+word n-grams is a different question, answered by ablation.
+
+### Ablation, round 1
+
+```{r}
+fig("08_ablation_screening")
+```
+
+One change at a time against word 1-2-gram TF-IDF (linear SVM, C = 1, 20k
+subsample, fold-wise paired differences). Sub-linear tf, idf and bigrams
+matter; everything else is within noise, and the head block appeared to hurt.
+
+### Ablation, round 2: a confound
+
+Adding a unit-norm block rescales every document vector, which for an SVM acts
+like changing C. Repeating the comparison across C and block weights reverses
+the verdict on the head block:
+
+```{r, out.width = "80%"}
+fig("08_ablation_weights")
+```
+
+### Confirmation on the full training split
+
+```{r}
+conf |> transmute(`Feature set` = variant, Features = format(round(n_features), big.mark = ","),
+                  `CV accuracy` = sprintf("%s ± %s", pct(accuracy_mean, 2), pct(accuracy_se, 2)),
+                  `CV macro-F1` = sprintf("%s ± %s", pct(macro_f1_mean, 2), pct(macro_f1_se, 2))) |>
+  knitr::kable()
+```
+
+Selected: word 1-2-grams + head block (first 20 words, weight 0.5). Character
+n-grams were dropped on cost (4× compute for a gain within noise); surface
+statistics add nothing once n-grams are present.
+
+## 4. Models
+
+### Baselines
+
+```{r}
+fig("07_baselines")
+```
+
+### Tuning
+
+`r nrow(tuned)` configurations from `r n_distinct(tuned$family)` families, same
+features and folds for all:
+
+```{r}
+fig("09_regularisation_paths")
+```
+
+```{r}
+fig("09_best_per_family")
+```
+
+```{r}
+best_fam |> arrange(desc(accuracy_mean)) |>
+  transmute(Model = model,
+            `CV accuracy` = sprintf("%s ± %s", pct(accuracy_mean, 2), pct(accuracy_se, 2)),
+            `CV macro-F1` = sprintf("%s ± %s", pct(macro_f1_mean, 2), pct(macro_f1_se, 2)),
+            `Fit time (s)` = round(fit_seconds, 1)) |>
+  knitr::kable()
+```
+
+### Selection and hold-out check
+
+The CV winner is **`r winner`**. Before touching the test split, the best
+configuration of every family was fitted on the full training split and scored
+on the validation split, which had not been used for anything so far:
+
+```{r}
+fig("10_cv_vs_validation")
+```
+
+The ranking carries over (Spearman ρ =
+`r round(cor(cvval$cv_accuracy, cvval$valid_accuracy, method = "spearman"), 2)`).
+Validation scores are, if anything, slightly higher than the CV estimates; the
+hold-out models were trained on all of the training split rather than four
+fifths of it. The four tuned linear models are indistinguishable on validation
+as well, so the choice among them is not consequential.
+
+Two side questions were settled on the same hold-out:
+
+```{r}
+res("10_nonlinear_check") |>
+  transmute(Model = model, `Validation accuracy` = pct(accuracy), `Validation macro-F1` = pct(macro_f1)) |>
+  knitr::kable()
+```
+
+Gradient-boosted trees beat a linear model on the same 100 LSA components, but
+both are far behind the linear model on the full sparse representation: what
+matters is keeping the n-gram detail, not adding non-linearity.
+
+The selected configuration was then refitted on train + validation.
+
+## 5. Validation of the final model
+
+### Target shuffling
+
+```{r}
+fig("11_target_shuffle")
+```
+
+```{r, out.width = "80%"}
+fig("11_target_shuffle_null")
+```
+
+```{r}
+shuf |> filter(metric %in% c("accuracy", "macro_f1")) |>
+  transmute(Metric = metric, Observed = pct(observed), `Null mean` = pct(null_mean, 2),
+            `Null max` = pct(null_max, 2), `z` = round(z), `Permutation p` = signif(p_value, 2)) |>
+  knitr::kable()
+```
+
+### Held-out test split
+
+```{r}
+fig("12_benchmark_comparison")
+```
+
+```{r, out.width = "85%"}
+fig("12_bootstrap_distribution")
+```
+
+```{r}
+topk |> transmute(k, `Top-k accuracy` = pct(accuracy)) |> knitr::kable()
+```
+
+### Per-class performance
+
+```{r}
+fig("12_per_class_f1")
+```
+
+`r sum(pc$f1 >= 0.9)` of `r nrow(pc)` classes reach F1 ≥ 0.90 and
+`r sum(pc$f1 < 0.6)` stay below 0.60. The weakest:
+
+```{r}
+pc |> slice_min(f1, n = 10) |>
+  transmute(Class = label, `Test examples` = support, Precision = pct(precision, 0), Recall = pct(recall, 0), F1 = pct(f1, 0)) |>
+  knitr::kable()
+```
+
+### Confusions
+
+```{r}
+fig("12_confusion_heatmap")
+```
+
+```{r}
+cpairs |> head(10) |>
+  transmute(`True class` = truth, `Predicted as` = estimate, Errors = n, `Share of true class` = pct(share_of_truth, 0)) |>
+  knitr::kable()
+```
+
+### Confidence
+
+```{r}
+fig("12_confidence")
+```
+
+The SVM margin orders predictions well: auto-labelling only the most confident
+`r pct(sel$coverage[2], 0)` of provisions gives `r pct(sel$accuracy[2])`
+accuracy on that share, and `r pct(sel$accuracy[4])` at
+`r pct(sel$coverage[4], 0)` coverage.
+
+## 6. Robustness
+
+### Boilerplate
+
+```{r}
+fig("13_accuracy_by_similarity")
+```
+
+```{r}
+fig("12_slices")
+```
+
+```{r}
+grp |> transmute(Scheme = scheme, `CV accuracy` = sprintf("%s ± %s", pct(accuracy_mean, 2), pct(accuracy_se, 2)),
+                 `CV macro-F1` = sprintf("%s ± %s", pct(macro_f1_mean, 2), pct(macro_f1_se, 2))) |>
+  knitr::kable()
+```
+
+Keeping template twins in the same fold lowers the CV estimate by
+`r sprintf("%.1f", 100 * (grp$accuracy_mean[1] - grp$accuracy_mean[2]))` pp: exact
+boilerplate repeats inflate a naive CV a little, which is one reason the
+training split was de-duplicated before any resampling. Similarity to the
+training data matters far more broadly, as the first figure shows: accuracy
+rises from `r pct(bysim$accuracy[1], 0)` for provisions unlike anything in
+train to `r pct(last(bysim$accuracy), 0)` for near-twins.
+
+### Temporal drift
+
+```{r}
+fig("13_temporal_drift")
+```
+
+The label mix of the test split differs significantly from train (section 1),
+yet the train-only model does no worse on the later splits than random-fold CV
+predicted: `r pct(drift$accuracy[1])` (CV) → `r pct(drift$accuracy[2])`
+(validation) → `r pct(drift$accuracy[3])` (test). Re-weighting the test rows to
+the training label mix changes test accuracy by only
+`r pp(drift$accuracy[4] - drift$accuracy[3], 1)`. Two caveats: CV models are
+trained on four fifths of the data, which by the learning curve below costs
+roughly half a point, and each hold-out number carries about ±0.6 pp of
+sampling error (2 SE). Within that resolution there is no sign that the model
+degrades on newer filings — over the two periods this corpus covers.
+
+### Learning curve
+
+```{r}
+fig("13_learning_curve")
+```
+
+### Resampling noise
+
+```{r}
+rep_cv |> transmute(Metric = metric, Mean = pct(mean, 2), `SD between folds` = pts(sd_between_folds),
+                    `SD between repeats` = pts(sd_between_repeats)) |> knitr::kable()
+```
+
+## 7. Limitations
+
+* Test accuracy describes filings from the period right after the training
+  data. Performance on later or structurally different contracts will be lower
+  and should be monitored.
+* Selecting one of `r nrow(tuned)` configurations by CV biases the CV estimate
+  of the winner upward slightly; the validation and test scores are free of
+  that bias, which is why they are the numbers to quote.
+* The bootstrap interval reflects test-set sampling only, not the variability
+  of retraining.
+* The comparison with published results is indicative only: those are
+  different training runs without reported intervals, and the final model here
+  also uses the validation split.
+* Linear models over n-grams cannot use context outside the provision, and the
+  hardest label pairs are near-synonyms. That published transformer models
+  score about the same suggests label ambiguity, rather than model capacity,
+  is the binding constraint on this benchmark.
+* The margin is a ranking score, not a calibrated probability.
+
+## Reproducing
+
+```sh
+cd ledgar
+make setup   # R packages + provisionr
+make all     # steps 01-13 and this report
+```
+
+The process itself is tracked as tickets on an epiq board (snapshot in
+`docs/epiq/board.md`); every commit subject starts with its ticket ref.

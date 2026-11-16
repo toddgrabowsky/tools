@@ -1,0 +1,1453 @@
+[
+ {
+  "id": "01M7H2AVJ2KYMDK65V4SKVXNKP",
+  "action": "init.workspace",
+  "payload": {
+   "id": "8MBKBKH",
+   "name": "Workspace",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "Y8QXE8C"
+ },
+ {
+  "id": "01M7H2AVJ562147Q9WRRP1MVTR",
+  "action": "add.board",
+  "payload": {
+   "id": "8MBKBKJ",
+   "name": "Default",
+   "parent": "8MBKBKH",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "Y8QXE8C"
+ },
+ {
+  "id": "01M7H2AVJ66BMK8GB0T1YC8VDN",
+  "action": "add.swimlane",
+  "payload": {
+   "id": "8MBKBKK",
+   "name": "Todo",
+   "parent": "8MBKBKJ",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "Y8QXE8C"
+ },
+ {
+  "id": "01M7H2AVJ70H4C5ESA2X9WW0AA",
+  "action": "add.swimlane",
+  "payload": {
+   "id": "8MBKBKM",
+   "name": "In progress",
+   "parent": "8MBKBKJ",
+   "rank": "bfffffffffffffffffffffff"
+  },
+  "userId": "Y8QXE8C"
+ },
+ {
+  "id": "01M7H2AVJ8RF26G1A178FNR4JR",
+  "action": "add.swimlane",
+  "payload": {
+   "id": "8MBKBKN",
+   "name": "Done",
+   "parent": "8MBKBKJ",
+   "rank": "dfffffffffffffffffffffff"
+  },
+  "userId": "Y8QXE8C"
+ },
+ {
+  "id": "01M7H2AVJ9PPEHSXQEE3W4Y59D",
+  "action": "add.board",
+  "payload": {
+   "id": "9DV0SM5",
+   "name": "Closed",
+   "parent": "8MBKBKH",
+   "rank": "bfffffffffffffffffffffff"
+  },
+  "userId": "Y8QXE8C"
+ },
+ {
+  "id": "01M7H2AVJA5GBMP3ZQ4Z00HK0D",
+  "action": "add.swimlane",
+  "payload": {
+   "id": "K0JAYNF",
+   "name": "Closed",
+   "parent": "9DV0SM5",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "Y8QXE8C"
+ },
+ {
+  "id": "01M7H2AVJBWVJEZT6SN535YMV8",
+  "action": "lock.node",
+  "payload": {
+   "id": "9DV0SM5"
+  },
+  "userId": "Y8QXE8C"
+ },
+ {
+  "id": "01M7H2AVJCMRGM39NX44WBH9ED",
+  "action": "lock.node",
+  "payload": {
+   "id": "K0JAYNF"
+  },
+  "userId": "Y8QXE8C"
+ },
+ {
+  "id": "01M7H2BEBNB9KC17M7942VQZ7W",
+  "action": "edit.title",
+  "payload": {
+   "id": "8MBKBKJ",
+   "name": "LEDGAR provision classifier"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H2BEBR5EM6C1BS6PX706BE",
+  "action": "add.issue",
+  "payload": {
+   "id": "5CJRS49",
+   "parent": "8MBKBKM",
+   "name": "Bootstrap project: R toolchain, repo layout, epiq board",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H2BEBS4WYEV2KGADCK4N6M",
+  "action": "edit.description",
+  "payload": {
+   "id": "5CJRS49",
+   "md": "Install R + packages, lay out the analysis project and the reusable R package, wire up epiq helper."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H2BEBVVZT5QBPFZMZ2GJPR",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "5CJRS49",
+   "tag": "QZY7PNX"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WAW8P0995XA64KHES0Z4",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "5CJRS49",
+   "goal": "MJJMYGM"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WB9NFAJAWWHNFAB99E8D",
+  "action": "add.issue",
+  "payload": {
+   "id": "JJQMBXW",
+   "parent": "8MBKBKK",
+   "name": "Acquire LEDGAR (LexGLUE) and document provenance",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WB9PJG6MVPYCJSACE0MQ",
+  "action": "edit.description",
+  "payload": {
+   "id": "JJQMBXW",
+   "md": "Download the three official parquet splits from coastalcph/lex_glue, record checksums and label map."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WB9R5BYZBF6XQ12J1KT4",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "JJQMBXW",
+   "tag": "JPERMX5"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WB9VPCB5HXPF5VK0F79G",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "JJQMBXW",
+   "goal": "JGMEBMH"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WBQKD4E2QMHF1KWZZWE0",
+  "action": "add.issue",
+  "payload": {
+   "id": "MESQXFW",
+   "parent": "8MBKBKK",
+   "name": "EDA: label distribution and class imbalance",
+   "rank": "bfffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WBQM1NEGT34FWP3HAJCC",
+  "action": "edit.description",
+  "payload": {
+   "id": "MESQXFW",
+   "md": "100 classes; how skewed? Are split proportions consistent?"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WBQPYGDYSP3WWRTBV8RH",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "MESQXFW",
+   "tag": "QX3XYX8"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WBQTVAGP5SX1W8H7JCXA",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "MESQXFW",
+   "goal": "P1R52MD"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WC59B08CRHRGT9EJP8W1",
+  "action": "add.issue",
+  "payload": {
+   "id": "CZ9GV3J",
+   "parent": "8MBKBKK",
+   "name": "EDA: text length, vocabulary and duplicates",
+   "rank": "dfffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WC5A9CSY7QT3G4N37M8F",
+  "action": "edit.description",
+  "payload": {
+   "id": "CZ9GV3J",
+   "md": "Token/char lengths per class, Zipf, exact + near duplicates, cross-split leakage."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WC5BAT8Z10KZAXHK3BD0",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "CZ9GV3J",
+   "tag": "QX3XYX8"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WC5EXN04TN8YQ5FFCQ0W",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "CZ9GV3J",
+   "goal": "P1R52MD"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WCJX38ZZMSVES4AH25W1",
+  "action": "add.issue",
+  "payload": {
+   "id": "2RV3J66",
+   "parent": "8MBKBKK",
+   "name": "EDA: class separability and confusable label pairs",
+   "rank": "efffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WCJZBP4WCTPC2BJA4E1T",
+  "action": "edit.description",
+  "payload": {
+   "id": "2RV3J66",
+   "md": "Distinctive terms per class, class-centroid similarity, low-dim projection."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WCK04MS9PY6DPS4QDKPS",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "2RV3J66",
+   "tag": "QX3XYX8"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WCK3N0ZMCX5W216MFGY4",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "2RV3J66",
+   "goal": "P1R52MD"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WCZD7NDYHZ7K4B41CX38",
+  "action": "add.issue",
+  "payload": {
+   "id": "G40T12E",
+   "parent": "8MBKBKK",
+   "name": "Cleaning: normalise text, handle duplicates and leakage",
+   "rank": "f7ffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WCZE1EW8XPZX6WP3Y3RJ",
+  "action": "edit.description",
+  "payload": {
+   "id": "G40T12E",
+   "md": "Turn EDA findings into a tested cleaning function; quantify what is removed."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WCZGTKERSZ1RT5CG0AAE",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "G40T12E",
+   "tag": "RDGZ054"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WCZK2F8MS1N786BWMMRD",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "G40T12E",
+   "goal": "7EHD33D"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WDCT38S65BNZYENEYGFC",
+  "action": "add.issue",
+  "payload": {
+   "id": "XWH411Z",
+   "parent": "8MBKBKK",
+   "name": "Feature engineering: TF-IDF word/char n-grams + handcrafted features",
+   "rank": "fbffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WDCW0MAPVYD5676Q50NN",
+  "action": "edit.description",
+  "payload": {
+   "id": "XWH411Z",
+   "md": "Sparse feature builders that are fit on training folds only."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WDCYEVCCWGAG0Q5G5EQX",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "XWH411Z",
+   "tag": "CEFRZ69"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WDD22B5EE983PX00Q4TB",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "XWH411Z",
+   "goal": "77D8YAH"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WDRXY0H2PWJDHR5B3XQM",
+  "action": "add.issue",
+  "payload": {
+   "id": "CB85EX1",
+   "parent": "8MBKBKK",
+   "name": "Baselines: majority, multinomial NB, linear models",
+   "rank": "fdffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WDRZV6GSBS8ZYKGR2MV6",
+  "action": "edit.description",
+  "payload": {
+   "id": "CB85EX1",
+   "md": "Establish a floor and a first honest CV estimate."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WDS1QSHR98QM0RGMG1MJ",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "CB85EX1",
+   "tag": "Z1D09E6"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WDS3G944GK1B371HB83M",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "CB85EX1",
+   "goal": "YBCAT6J"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WE4G6V9MBHWZRJ01Q44D",
+  "action": "add.issue",
+  "payload": {
+   "id": "7K7TEH9",
+   "parent": "8MBKBKK",
+   "name": "Iterate: feature ablations under k-fold CV",
+   "rank": "feffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WE4HS8EQ09921N53HM2Y",
+  "action": "edit.description",
+  "payload": {
+   "id": "7K7TEH9",
+   "md": "Which feature blocks earn their keep?"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WE4JK3MD22BJ0KNHJFVZ",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "7K7TEH9",
+   "tag": "Z1D09E6"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WE4MRXR8YCRE22DYPG7X",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "7K7TEH9",
+   "goal": "YBCAT6J"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WEFX7AWEQ4TWXVPF6CV6",
+  "action": "add.issue",
+  "payload": {
+   "id": "PP011SR",
+   "parent": "8MBKBKK",
+   "name": "Iterate: model family comparison and hyper-parameter tuning",
+   "rank": "ff7fffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WEFY7D2ARWTWJQCXXF8V",
+  "action": "edit.description",
+  "payload": {
+   "id": "PP011SR",
+   "md": "Linear SVM / logistic / NB-SVM / boosted trees on LSA; tune with CV."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WEFZJZC2JX2QMPN7HAH6",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "PP011SR",
+   "tag": "Z1D09E6"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WEG1P7E34SW2P50HM3GQ",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "PP011SR",
+   "goal": "YBCAT6J"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WEV7Y6T2YXYJQWR1Q9AV",
+  "action": "add.issue",
+  "payload": {
+   "id": "194Q29G",
+   "parent": "8MBKBKK",
+   "name": "Model selection and refit",
+   "rank": "ffbfffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WEV88JR5G1FQQSFC6RGD",
+  "action": "edit.description",
+  "payload": {
+   "id": "194Q29G",
+   "md": "Pick by CV (not test), refit on train+validation."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WEV96HCS49Y4M96Y8GPW",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "194Q29G",
+   "tag": "Z1D09E6"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WEVBDQX4Q1YANVTJY2J0",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "194Q29G",
+   "goal": "YBCAT6J"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WF674Q92YVV0SKCC4MC3",
+  "action": "add.issue",
+  "payload": {
+   "id": "3VK9VCE",
+   "parent": "8MBKBKK",
+   "name": "Validation: target shuffling (permutation) test",
+   "rank": "ffdfffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WF683T0VMNFVKPKC6GBB",
+  "action": "edit.description",
+  "payload": {
+   "id": "3VK9VCE",
+   "md": "Null distribution of the CV metric under shuffled labels."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WF6AB8SAT7FV61NN0HAH",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "3VK9VCE",
+   "tag": "ZR49M5P"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WF6DRA571754KJFNJWNZ",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "3VK9VCE",
+   "goal": "V6GD1FG"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WFHSYETXDR6G7140440V",
+  "action": "add.issue",
+  "payload": {
+   "id": "H1JCGBW",
+   "parent": "8MBKBKK",
+   "name": "Validation: held-out test evaluation with bootstrap CIs",
+   "rank": "ffefffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WFHTEZNCMT4R6T71PC76",
+  "action": "edit.description",
+  "payload": {
+   "id": "H1JCGBW",
+   "md": "One-shot test evaluation; per-class metrics; confusion; calibration."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WFHVPEF17CQX2WPKZZK0",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "H1JCGBW",
+   "tag": "ZR49M5P"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WFHXXKQCT6H4097FP7P0",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "H1JCGBW",
+   "goal": "V6GD1FG"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WFX09DZ3P9BA5BSD0F75",
+  "action": "add.issue",
+  "payload": {
+   "id": "JDRQF0W",
+   "parent": "8MBKBKK",
+   "name": "Validation: learning curve, error analysis, robustness",
+   "rank": "fff7ffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WFX1HZJJAS0R4RGNQ1AB",
+  "action": "edit.description",
+  "payload": {
+   "id": "JDRQF0W",
+   "md": "Does more data help? Where and why does it fail?"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WFX2A88P7Z1MM2KF4RC9",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "JDRQF0W",
+   "tag": "ZR49M5P"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WFX4P7HD20MRJWC8S8G6",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "JDRQF0W",
+   "goal": "V6GD1FG"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WG8K31GAY3F3SFTE5G3K",
+  "action": "add.issue",
+  "payload": {
+   "id": "4FHPWE5",
+   "parent": "8MBKBKK",
+   "name": "Package reusable workflow as an R package with tests",
+   "rank": "fffbffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WG8MR3MPF0JS7WR2REKG",
+  "action": "edit.description",
+  "payload": {
+   "id": "4FHPWE5",
+   "md": "R CMD check clean, unit tests, roxygen docs."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WG8PSDJ8YMVWJ7N6X2PK",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "4FHPWE5",
+   "tag": "4QQ3CVP"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WG8SZNJ7FA7B7M1CC4GZ",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "4FHPWE5",
+   "goal": "B1M1YJE"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WGM98S62D1F7DKG5BCNR",
+  "action": "add.issue",
+  "payload": {
+   "id": "1THT29R",
+   "parent": "8MBKBKK",
+   "name": "Final report and README",
+   "rank": "fffdffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WGMAMH61GBQD30P424ZY",
+  "action": "edit.description",
+  "payload": {
+   "id": "1THT29R",
+   "md": "Rendered report with all figures and a reproducible pipeline entry point."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WGMCQX9F2Y0TG23YZZKV",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "1THT29R",
+   "tag": "G3QMQT1"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WGMD84F8YVHKZJFJX3Q1",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "1THT29R",
+   "goal": "B1M1YJE"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5WPDNYTZJPHDE9CPJ1Z18",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "CKM9MG6",
+   "issue": "5CJRS49",
+   "md": "test comment",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H5XQ749RMGD54RTS1MPHKC",
+  "action": "delete.issue.comment",
+  "payload": {
+   "id": "CKM9MG6",
+   "issue": "5CJRS49"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H60CQ23R601G61EC397NFC",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "FHZV99Q",
+   "issue": "5CJRS49",
+   "md": "R 4.3.3 from apt + CRAN source packages (text2vec, LiblineaR, rsample, yardstick, xgboost, nanoparquet). Layout: `provisionr/` (package), `analysis/` (numbered scripts), `results/`, `figures/`.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H60CQ9TH491Q9Q8MNPBMG8",
+  "action": "move.node",
+  "payload": {
+   "id": "5CJRS49",
+   "parent": "8MBKBKN",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H60D4BGVKD42V18MMXMXN5",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "8SW7P12",
+   "issue": "JJQMBXW",
+   "md": "80,000 provisions (60k/10k/10k), 100 labels, no missing values. sha256 per split in results/01_provenance.csv. Note: the HF CDN host had to be allow-listed in the environment.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H60D4J08M0XMPKMM4TRC22",
+  "action": "move.node",
+  "payload": {
+   "id": "JJQMBXW",
+   "parent": "8MBKBKN",
+   "rank": "bfffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H6151E7QSV85M1EHZMF97E",
+  "action": "move.node",
+  "payload": {
+   "id": "MESQXFW",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H62H54VEATCWZS82N57NMS",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "5VPRKSW",
+   "issue": "MESQXFW",
+   "md": "Imbalance 138x (23..3,167 per class), effective classes 74, majority baseline 5.3%. **Test label mix has drifted from train** (chi-sq p~1e-61) while validation is close - the LexGLUE split is chronological. Implication: CV on train is optimistic; opened a follow-up ticket. Figures: 02_label_counts, 02_label_concentration, 02_label_split_consistency.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H62H5BF2G0QKTBF8DB5V8R",
+  "action": "move.node",
+  "payload": {
+   "id": "MESQXFW",
+   "parent": "8MBKBKN",
+   "rank": "dfffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H62HJ9ZN0KD7JQ5JVSEJZJ",
+  "action": "add.issue",
+  "payload": {
+   "id": "R1ATBW1",
+   "parent": "8MBKBKK",
+   "name": "Quantify temporal drift: does random CV overstate out-of-time performance?",
+   "rank": "fffeffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H62HJBF36NP4TKEPXJKNV3",
+  "action": "edit.description",
+  "payload": {
+   "id": "R1ATBW1",
+   "md": "Raised by MESQXFW: test label mix differs from train (chronological split). Compare CV estimate vs validation vs test; consider prior-shift correction."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H62HJCBZ1ZKYZX7R72EQRA",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "R1ATBW1",
+   "tag": "ZR49M5P"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H62HJEPPERQ0BJWHKY8H4S",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "R1ATBW1",
+   "tag": "8YD5TJD"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H62HJF6BDKPR308HS93TW8",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "R1ATBW1",
+   "goal": "V6GD1FG"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H62HYCYD4QJC0E6CT4E4BE",
+  "action": "move.node",
+  "payload": {
+   "id": "CZ9GV3J",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H747857T5APZ2GH47V3P9C",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "3BKYJ35",
+   "issue": "CZ9GV3J",
+   "md": "Median 86 words (long tail to 1,215); class explains 21% of rank variance in length. Vocabulary 21.5k types, 3.7k purely numeric -> mask digits. **No exact duplicates, but 3.4% template repeats in train, 39 rows with conflicting labels, 5-6% of held-out rows share a template with train, ~15% have a >=0.95 cosine twin.** Near-duplication is uniform across splits. Follow-up: grouped CV to measure how much twins inflate CV.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H7478FN0XBSQ46872Z92AA",
+  "action": "move.node",
+  "payload": {
+   "id": "CZ9GV3J",
+   "parent": "8MBKBKN",
+   "rank": "efffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H747NR2R00QGB5R3SW3EH7",
+  "action": "add.issue",
+  "payload": {
+   "id": "NW0W1WT",
+   "parent": "8MBKBKK",
+   "name": "Grouped CV: do near-duplicate templates inflate the CV estimate?",
+   "rank": "ffff7fffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H747NTYAN87PKZG5S6MQ8M",
+  "action": "edit.description",
+  "payload": {
+   "id": "NW0W1WT",
+   "md": "Raised by CZ9GV3J. Compare stratified k-fold against group k-fold where template-duplicates stay in one fold."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H747NV4KYZFZ8CMMBREA8S",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "NW0W1WT",
+   "tag": "ZR49M5P"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H747NWH40AS1PRJ11V3EWM",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "NW0W1WT",
+   "tag": "8YD5TJD"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H747NZ9AFTS568A2A671NZ",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "NW0W1WT",
+   "goal": "V6GD1FG"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H7484RTSN32C60290NCQB2",
+  "action": "move.node",
+  "payload": {
+   "id": "2RV3J66",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H783K3QTHVYXZ1SQ177VCY",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "N42JXVK",
+   "issue": "2RV3J66",
+   "md": "Most classes are well separated in TF-IDF space; errors will concentrate in near-synonymous label pairs (Applicable/Governing Laws 0.97 centroid cosine, Defined Terms/Definitions 0.93, Tax Withholdings/Withholdings 0.92, Jurisdiction family). Figures 04_*.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H783K9B3E8GTKFABR8KHF9",
+  "action": "move.node",
+  "payload": {
+   "id": "2RV3J66",
+   "parent": "8MBKBKN",
+   "rank": "f7ffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H78403TADVCTA7X7KAV45N",
+  "action": "move.node",
+  "payload": {
+   "id": "G40T12E",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H7C720001E2CJWJDFFYSKY",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "HDKJ3K5",
+   "issue": "G40T12E",
+   "md": "clean_corpus(): 60,000 -> 57,947 train rows (2 fragments, 39 label-conflict rows, 2,012 template repeats); held-out splits untouched but tagged `template_in_train`. Vocabulary 27.8k -> 17.5k types after lower-casing + digit masking. Open question carried to modelling: does de-duplication help or hurt held-out accuracy?",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H7C726756763QV1SZ064GP",
+  "action": "move.node",
+  "payload": {
+   "id": "G40T12E",
+   "parent": "8MBKBKN",
+   "rank": "fbffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H7C7F5WTXX1JSBQ3YM890Z",
+  "action": "move.node",
+  "payload": {
+   "id": "XWH411Z",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H7STZWFA03YK21W03ZB0SG",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "Y8FJ7VK",
+   "issue": "XWH411Z",
+   "md": "Feature blocks implemented in provisionr (word / char / head n-gram TF-IDF + 12 surface statistics), all fitted on training folds only. Evidence each block has signal: stats eta^2 7-32%; first 5 words recur for 70% of provisions and identify the label 76% of the time. Ablation under CV decides what stays (7K7TEH9).",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H7SV039B8ZGMXKM88AE8SZ",
+  "action": "move.node",
+  "payload": {
+   "id": "XWH411Z",
+   "parent": "8MBKBKN",
+   "rank": "fdffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H7SVEA1R74T80F9J8HZ3E7",
+  "action": "move.node",
+  "payload": {
+   "id": "CB85EX1",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H8EMTFF8X70CB6NKXPM8KS",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "ABZJCXR",
+   "issue": "CB85EX1",
+   "md": "5-fold CV, word 1-2-gram TF-IDF: majority 5.3% | centroid 76.6% | NB 78.9% | complement NB 80.6% | logreg(C=1) 83.4% | **linear SVM(C=1) 87.3% acc / 81.6% macro-F1**. Fold SE ~0.1-0.2pp, so differences between families are real. LogReg at C=1 is over-shrunk - tune before judging.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H8EMTNJDH5X3MZ5ET95GMS",
+  "action": "move.node",
+  "payload": {
+   "id": "CB85EX1",
+   "parent": "8MBKBKN",
+   "rank": "feffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7H8EN89HB4S99JNE0GB362Q",
+  "action": "move.node",
+  "payload": {
+   "id": "7K7TEH9",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HAQ1NM0ZNCZ5BKBCD920JH",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "PWP3PX0",
+   "issue": "7K7TEH9",
+   "md": "Screening (20k subsample, SVM C=1, paired folds): nothing beats plain word 1-2-gram TF-IDF by more than noise. Clear losers: unigrams only (-1.2pp), raw tf (-0.4pp), no idf (-0.4pp), **head block (-0.3pp)**. Neutral: digit masking, min_doc_count=5 (halves features for free), surface stats, char n-grams (+0.07pp at 4x cost). Also: char n-grams with 4 forked workers OOM-killed the run -> per-variant caching + fewer workers.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HAQ23HK1D99CC66ZJPBF99",
+  "action": "add.issue",
+  "payload": {
+   "id": "XJBFAME",
+   "parent": "8MBKBKM",
+   "name": "Ablation follow-up: are block comparisons confounded by effective regularisation?",
+   "rank": "bfffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HAQ23K7878FAZSTAJJMEXG",
+  "action": "edit.description",
+  "payload": {
+   "id": "XJBFAME",
+   "md": "Raised by 7K7TEH9. Adding a unit-norm block rescales document vectors (norm sqrt(2)), which acts like changing SVM C. Re-test head/stats/char blocks at several weights across C in {0.3,1,3} before discarding them."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HAQ23MZRHHK99VDXFNYKQE",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "XJBFAME",
+   "tag": "Z1D09E6"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HAQ23NQM1GFF6XG49GR33K",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "XJBFAME",
+   "tag": "8YD5TJD"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HAQ23RD06XR8NAHHYTY0Q6",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "XJBFAME",
+   "goal": "YBCAT6J"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HE0C2C9KRD9M68N4KXB8K0",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "2V61BDT",
+   "issue": "XJBFAME",
+   "md": "Result (20k subsample, 5-fold): the screening verdict on the head block was a confound. Accuracy by C (0.3 / 1 / 3): word only 83.4 / 83.9 / 83.8; +head w=1 83.7 / 83.7 / 83.4; **+head w=0.5 84.0 / 84.5 / 84.3**; +head w=0.25 83.6 / 84.2 / 84.1; +stats ~ no change; +char w=0.5 83.5 / 84.1 / 83.9 (not worth 4x compute). Next: tune head block design (words, n-gram range) then confirm on the full training split.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HF6YYB7GW87EY30REW3YEF",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "W59JDTA",
+   "issue": "7K7TEH9",
+   "md": "Screening done; see XJBFAME for the follow-up that overturned the head-block verdict.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HF6YYJBDHR3KTT3E4ENAX1",
+  "action": "move.node",
+  "payload": {
+   "id": "7K7TEH9",
+   "parent": "8MBKBKN",
+   "rank": "ff7fffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HF6ZCXKZAVACS2DTNZ7GBT",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "RQHFMB9",
+   "issue": "XJBFAME",
+   "md": "Confirmed on full train (same folds as baselines): word 1-2 + head(w=0.5, first 20 words) -> **87.9% acc / 82.5% macro-F1** vs 87.3 / 81.6 for words alone; +stats adds nothing. Selected feature set recorded in chosen_spec(). Lesson: compare feature blocks only with regularisation re-tuned.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HF6ZD37XHJEN3ASKT8ESC4",
+  "action": "move.node",
+  "payload": {
+   "id": "XJBFAME",
+   "parent": "8MBKBKN",
+   "rank": "ffbfffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HF7019DDKH69F0YR5D7NVS",
+  "action": "move.node",
+  "payload": {
+   "id": "PP011SR",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HH3N34B81JWCHPVCFC8WT0",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "5G98P56",
+   "issue": "PP011SR",
+   "md": "24 configs / 7 families, paired 5-fold CV. Winner **linear SVM one-vs-rest C=1: 87.9% acc, 82.6% macro-F1**; Crammer-Singer C=1 is a statistical tie (-0.05pp, paired p=0.27) at ~3x less compute; logistic regression C=100 -0.27pp (p=0.007); NB families 3-6pp behind. Class-balanced weights do not help macro-F1.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HH3N3AM63SG3G3GQNW8SYV",
+  "action": "move.node",
+  "payload": {
+   "id": "PP011SR",
+   "parent": "8MBKBKN",
+   "rank": "ffdfffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HH3NK7GWSZQTN479VTR7V9",
+  "action": "move.node",
+  "payload": {
+   "id": "194Q29G",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HJ8J70ZREWQNBSGVJVGDSR",
+  "action": "move.node",
+  "payload": {
+   "id": "4FHPWE5",
+   "parent": "8MBKBKM",
+   "rank": "bfffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HJ8JS78NMG397G14CH95MG",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "6V10FD2",
+   "issue": "4FHPWE5",
+   "md": "provisionr 0.1.0: 30 exported functions across data / clean / features / models / resample / metrics / plots, roxygen man pages, testthat suite (111 expectations, all pass), R CMD check clean apart from a container-locale warning. Makefile wraps setup / all / check / board.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HJ8JSE4SM2VXW00V1G2P4N",
+  "action": "move.node",
+  "payload": {
+   "id": "4FHPWE5",
+   "parent": "8MBKBKN",
+   "rank": "ffefffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HKY2P372GT91W2XSK2ZFN7",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "29JFE3T",
+   "issue": "194Q29G",
+   "md": "Selection by CV: linear SVM OvR C=1. Validation hold-out (untouched until now; fit on full train): **88.6% acc / 82.1% macro-F1**; family ranking agrees with CV (Spearman 0.95). Non-linear check on 100-d LSA: xgboost 81.0% vs linear SVM 77.0% on the same LSA features, both far below the sparse linear model (88.6%) - representation, not linearity, is what matters. De-duplicating train: 88.6% vs 88.7% raw -> no accuracy benefit; kept for honest fold assignment. Refit on train+validation: 67,336 rows.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HN6KHVDTAESSYR90M9Q4MV",
+  "action": "move.node",
+  "payload": {
+   "id": "194Q29G",
+   "parent": "8MBKBKN",
+   "rank": "fff7ffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HN6M6951TRPJEA3XF9A3X8",
+  "action": "move.node",
+  "payload": {
+   "id": "3VK9VCE",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HN6MZ5F9S2B9BR15WMZ44Z",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "R2FM920",
+   "issue": "3VK9VCE",
+   "md": "100 permutations x full 5-fold CV on 6k provisions: real labels 80.0% acc vs shuffled mean 2.3% (max 3.1%), z ~ 320, permutation p <= 0.0099. Null lies between frequency-guessing (1.8%) and majority rate (4.7%). In-sample accuracy on shuffled labels is 99.6% -> training fit is meaningless for this model class; resampling is essential.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HN6MZM2CHEY07D73JZN2C7",
+  "action": "move.node",
+  "payload": {
+   "id": "3VK9VCE",
+   "parent": "8MBKBKN",
+   "rank": "fffbffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HN6NJ2RQ1TSM21SGG66RE1",
+  "action": "move.node",
+  "payload": {
+   "id": "H1JCGBW",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HPAYBG3NTT7NJH33QY5SSX",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "XZK984K",
+   "issue": "H1JCGBW",
+   "md": "Test (10k, scored once): **89.3% acc [88.8, 90.0], macro-F1 84.8% [83.4, 85.7]**, top-3 95.8%. Train-only fit for like-for-like with LexGLUE: 88.7 / 83.6 (published TF-IDF+SVM 87.2 / 82.4; RoBERTa-large 88.6 / 83.6). 685 test rows are textual twins of train/val rows (99% acc); novel text 88.6%. Margin gives 97.6% acc at 70% coverage.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HPAYBSJN61PWH04B42SWDT",
+  "action": "move.node",
+  "payload": {
+   "id": "H1JCGBW",
+   "parent": "8MBKBKN",
+   "rank": "fffdffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HPAYSWWNNVS5V6MNJYKA9V",
+  "action": "move.node",
+  "payload": {
+   "id": "JDRQF0W",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HPAZ8B1MVSTATE2JERCEJA",
+  "action": "move.node",
+  "payload": {
+   "id": "R1ATBW1",
+   "parent": "8MBKBKM",
+   "rank": "bfffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HPAZPACQ2MW4CAFGCB0FZW",
+  "action": "move.node",
+  "payload": {
+   "id": "NW0W1WT",
+   "parent": "8MBKBKM",
+   "rank": "dfffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HQ6JCF3PVBCGQKKKMDQT72",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "2SNZ641",
+   "issue": "JDRQF0W",
+   "md": "Repeated CV: 88.0% +/- 0.26pp between folds, 0.11pp between repeats. Learning curve still rising ~2pp per doubling beyond 20k. Most confident errors are label-scheme collisions and catch-all classes (General, Miscellaneous).",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HQ6JCP9H2YJHB8DM9SHVV3",
+  "action": "move.node",
+  "payload": {
+   "id": "JDRQF0W",
+   "parent": "8MBKBKN",
+   "rank": "fffeffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HQ6JV160DEVWZXREKHGPCN",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "R21XMBG",
+   "issue": "NW0W1WT",
+   "md": "Grouped 5-fold (template twins kept together) on raw train: 88.1% vs 88.5% plain -> twins inflate naive CV by ~0.4pp; de-duplicating before CV was the right call. Test accuracy by nearest-train similarity: 73% (<0.3) ... 99% (>=0.95).",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HQ6JV9RGE2NEMRN5NVSM1M",
+  "action": "move.node",
+  "payload": {
+   "id": "NW0W1WT",
+   "parent": "8MBKBKN",
+   "rank": "ffff7fffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HQ6KAVZCXWHTGK9TW0BB73",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "QZ7GKHT",
+   "issue": "R1ATBW1",
+   "md": "No drift penalty found: train-only pipeline 88.0% CV -> 88.6% validation -> 88.7% test; re-weighting test to train label mix changes accuracy by -0.1pp. The significant label-mix shift (MESQXFW) does not translate into lower accuracy over these two periods.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HQ6KB44N43WY3TFDEPX0R9",
+  "action": "move.node",
+  "payload": {
+   "id": "R1ATBW1",
+   "parent": "8MBKBKN",
+   "rank": "ffffbfffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HQ6KVXQR5KDS9ZHTW0WCS3",
+  "action": "move.node",
+  "payload": {
+   "id": "1THT29R",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HQ94Q2NH9MZ3D8N8E3E150",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "9EY6EB1",
+   "issue": "1THT29R",
+   "md": "reports/report.md is generated from results/*.csv and figures/ by reports/report.Rmd, so every number in the text is computed. README documents layout, protocol and how to reproduce (make setup / all / check / board).",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7HQ94Q982KE7JQ1A6VR60D8",
+  "action": "move.node",
+  "payload": {
+   "id": "1THT29R",
+   "parent": "8MBKBKN",
+   "rank": "ffffdfffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ }
+]
