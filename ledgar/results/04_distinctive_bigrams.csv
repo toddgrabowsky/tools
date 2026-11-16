@@ -1,0 +1,601 @@
+label,term,n,tf_idf
+Adjustments,stock split,129,0.01802518011573493
+Adjustments,the number,241,0.012284710565749014
+Adjustments,of shares,248,0.011932502221513703
+Adjustments,stock dividend,77,0.010759216038074339
+Adjustments,such adjustment,71,0.00992083556757504
+Adjustments,spin off,68,0.007818107514770785
+Agreements,obligations covenants,28,0.008016440584893742
+Agreements,observance or,27,0.007730139135433251
+Agreements,or fulfillment,27,0.007730139135433251
+Agreements,performance observance,27,0.007730139135433251
+Agreements,or complied,34,0.007454251851641957
+Agreements,performed or,33,0.007235009150123075
+Amendments,letter of,1004,0.008564962482298941
+Amendments,be amended,698,0.008335910574353914
+Amendments,of credit,1118,0.007881113866944145
+Amendments,a letter,364,0.007865715277206052
+Amendments,amendment renewal,321,0.00781419170670744
+Amendments,renewal or,314,0.0067852598819854405
+Anti-Corruption Laws,anti corruption,135,0.07732175024149592
+Anti-Corruption Laws,corruption laws,80,0.04582029643940499
+Anti-Corruption Laws,bribery act,49,0.04015183969989618
+Anti-Corruption Laws,the uk,46,0.03769356379990253
+Anti-Corruption Laws,uk bribery,46,0.03769356379990253
+Anti-Corruption Laws,corrupt practices,59,0.03681261849499625
+Applicable Laws,the state,393,0.024329525588393696
+Applicable Laws,be governed,224,0.02340596370991509
+Applicable Laws,governed by,230,0.022524364758166042
+Applicable Laws,laws of,355,0.021387321197892047
+Applicable Laws,and construed,150,0.020367246370391962
+Applicable Laws,state of,368,0.01988412485727616
+Approvals,been obtained,40,0.011361802268593143
+Approvals,consent approval,41,0.011102763152803279
+Approvals,execution delivery,59,0.010678906526497067
+Approvals,0 lease,20,0.010358007615807673
+Approvals,or registration,30,0.008971862472782652
+Approvals,be obtained,32,0.008665571241212314
+Arbitration,the arbitrator,472,0.023619629616158357
+Arbitration,arbitration association,244,0.016100565042924966
+Arbitration,the arbitration,304,0.015212642803627417
+Arbitration,american arbitration,251,0.015203662558888961
+Arbitration,the american,248,0.015021945476511802
+Arbitration,arbitration in,169,0.012441088574120861
+Assignments,may assign,428,0.010895516407188898
+Assignments,be assigned,359,0.007821895939140783
+Assignments,processing and,187,0.0077921661353436405
+Assignments,and recordation,183,0.007625488784855007
+Assignments,recordation fee,181,0.0075421501096106895
+Assignments,inure to,426,0.007312658808702602
+Assigns,an estate,10,0.03512715626230428
+Assigns,creditor trust,10,0.03512715626230428
+Assigns,other representative,10,0.03512715626230428
+Assigns,possession creditor,10,0.03512715626230428
+Assigns,trustee debtor,10,0.029839992413639556
+Assigns,successors and,28,0.028770451672818508
+Authority,been duly,302,0.00795011171052371
+Authority,and authority,247,0.0073640004127250355
+Authority,powers as,144,0.007043676534128088
+Authority,power and,222,0.006023676480253775
+Authority,deliver this,129,0.005964228745663515
+Authority,authority to,288,0.005864365295005792
+Authorizations,been duly,481,0.009594701860128608
+Authorizations,creditors rights,206,0.007216920501780522
+Authorizations,bankruptcy insolvency,226,0.0071693371743383
+Authorizations,duly authorized,344,0.007072732398006033
+Authorizations,limited by,235,0.006833578433846922
+Authorizations,all necessary,253,0.006323233422603325
+Base Salary,base salary,2249,0.10431783800210026
+Base Salary,salary shall,507,0.04338989879355232
+Base Salary,the base,705,0.03551273195862708
+Base Salary,payroll practices,366,0.025772977005573308
+Base Salary,annual base,390,0.025559178024678005
+Base Salary,salary of,233,0.023473663961305274
+Benefits,to participate,190,0.016795216871425718
+Benefits,benefit plans,172,0.014098699712170735
+Benefits,participate in,188,0.013016654168367814
+Benefits,be eligible,116,0.012860592190619621
+Benefits,health insurance,62,0.011903633433305333
+Benefits,eligible to,117,0.011231654126586482
+Binding Effects,inure to,382,0.02382470360399785
+Binding Effects,and inure,255,0.020186275567303152
+Binding Effects,successors and,404,0.017891306258745156
+Binding Effects,upon and,292,0.017592010895341792
+Binding Effects,be binding,411,0.017199976749263487
+Binding Effects,binding upon,430,0.017019800968510506
+Books,general or,11,0.03450740602579633
+Books,management's general,11,0.03450740602579633
+Books,with management's,11,0.03450740602579633
+Books,of account,12,0.028663961013514833
+Books,transactions are,12,0.026312336443064306
+Books,or specific,11,0.026275297595721933
+Brokers,broker or,190,0.029315100415355854
+Brokers,no broker,132,0.023974855632042127
+Brokers,broker finder,127,0.02306671716113144
+Brokers,any broker,153,0.02115966705935544
+Brokers,fee or,179,0.021149125496594926
+Brokers,finder or,113,0.02052392944258152
+Capitalization,capital stock,1381,0.022527383940411698
+Capitalization,0 shares,683,0.016359258209970064
+Capitalization,to subscribe,507,0.01585803108411211
+Capitalization,of capital,688,0.015476098352396259
+Capitalization,stock of,1084,0.015357563776497963
+Capitalization,shares of,1881,0.013046633681819944
+Change In Control,in control,767,0.0472746931318991
+Change In Control,change in,799,0.03076733598115846
+Change In Control,a change,423,0.026071962444319845
+Change In Control,the change,232,0.01836222249242498
+Change In Control,control shall,48,0.009546867449573655
+Change In Control,control the,78,0.008508544279867148
+Closings,closing shall,402,0.01910232080898432
+Closings,the offices,289,0.019095286850688842
+Closings,offices of,301,0.016364308667646196
+Closings,each purchaser,402,0.015633948813208006
+Closings,take place,235,0.015527309376857708
+Closings,shall deliver,463,0.013856740213394671
+Compliance With Laws,all laws,238,0.011846470154107168
+Compliance With Laws,laws rules,302,0.009252609280770355
+Compliance With Laws,and orders,181,0.009009290327283181
+Compliance With Laws,material adverse,597,0.008421400957317375
+Compliance With Laws,rules regulations,218,0.008309408296241062
+Compliance With Laws,adverse effect,568,0.008234708410960013
+Confidentiality,confidential information,1024,0.009295500895855647
+Confidentiality,such information,727,0.007779072567567616
+Confidentiality,portfolio managers,330,0.007281384297485509
+Confidentiality,the portfolio,328,0.007237254695682566
+Confidentiality,the confidentiality,463,0.006013056611540202
+Confidentiality,purchaser's assets,210,0.005454608589302128
+Consent To Jurisdiction,or proceeding,365,0.018243548718333735
+Consent To Jurisdiction,such court,194,0.013655941414710437
+Consent To Jurisdiction,brought in,159,0.013022029282667272
+Consent To Jurisdiction,action or,325,0.011668020056215145
+Consent To Jurisdiction,jurisdiction of,198,0.011123790993309917
+Consent To Jurisdiction,new york,240,0.010146719155697656
+Consents,been obtained,96,0.006900308769560674
+Consents,no consent,80,0.005482103892886814
+Consents,filing with,89,0.0053701999123995595
+Consents,all consents,56,0.005129828572031624
+Consents,or filing,68,0.004455897615856886
+Consents,execution delivery,97,0.00444279795970596
+Construction,the singular,136,0.012083507017135243
+Construction,the plural,122,0.010839616588900732
+Construction,the context,127,0.010217477190069752
+Construction,include the,168,0.009946166035568162
+Construction,the words,109,0.009198276719999995
+Construction,the language,83,0.008307576969762153
+Cooperation,such cooperation,162,0.015570432088825109
+Cooperation,cooperate with,227,0.010220529513804394
+Cooperation,to cooperate,134,0.00986261423655434
+Cooperation,shall cooperate,107,0.005802624335691125
+Cooperation,of pocket,102,0.005313421470502905
+Cooperation,cooperation in,54,0.005190144029608369
+Costs,costs and,104,0.02245360746869158
+Costs,attorneys fees,94,0.021515268834377904
+Costs,and expenses,106,0.019334277532987415
+Costs,fees and,100,0.01875054982597627
+Costs,prevailing party,47,0.016854306084834163
+Costs,reasonable attorneys,52,0.015363687776680554
+Counterparts,one and,1686,0.03608800220932014
+Counterparts,an original,2337,0.035403877478240704
+Counterparts,constitute one,1493,0.0343373126690023
+Counterparts,counterparts each,1524,0.03063517578375152
+Counterparts,together shall,1363,0.02917434579555359
+Counterparts,same instrument,1147,0.02873734912063633
+Death,executive's death,139,0.020037791789106963
+Death,executive's estate,82,0.015587236275830134
+Death,of death,82,0.014308441353021761
+Death,his death,52,0.012981452250847335
+Death,the executive's,233,0.01036962479710904
+Death,estate or,52,0.0098845888578435
+Defined Terms,capitalized terms,225,0.06435298277071756
+Defined Terms,terms used,180,0.05685554182775864
+Defined Terms,otherwise defined,142,0.050527851626638164
+Defined Terms,the meanings,164,0.04920055798391186
+Defined Terms,defined herein,172,0.049194280162504087
+Defined Terms,not defined,103,0.03938047392343802
+Definitions,capitalized terms,383,0.047394170723761085
+Definitions,terms used,290,0.039631297122694156
+Definitions,otherwise defined,245,0.03771799203559935
+Definitions,the meanings,260,0.033747337865262676
+Definitions,defined herein,227,0.028090017635231765
+Definitions,not defined,155,0.025639845462488875
+Disability,a disability,61,0.012650426972227038
+Disability,term disability,64,0.011274856901170915
+Disability,or mental,59,0.010394008705766938
+Disability,executive's disability,47,0.00974705029007657
+Disability,reasonable accommodation,45,0.009332282192626504
+Disability,physical or,57,0.009000891657535754
+Disclosures,material fact,771,0.025580382119909765
+Disclosures,fact necessary,383,0.01766931390354588
+Disclosures,fact or,450,0.01589772660706506
+Disclosures,circumstances under,402,0.015259833267651174
+Disclosures,to state,463,0.014519822601033953
+Disclosures,the statements,454,0.01423757982909161
+Duties,duties and,234,0.010137251652818402
+Duties,such duties,141,0.01002174951527588
+Duties,and responsibilities,171,0.009159615609989529
+Duties,executive officer,265,0.009018379524319822
+Duties,executive shall,381,0.008819613693859817
+Duties,chief executive,251,0.008790639533160512
+Effective Dates,increase effective,123,0.025258001109272062
+Effective Dates,the increase,107,0.021972407469041548
+Effective Dates,final allocation,106,0.02176705786652714
+Effective Dates,allocation of,104,0.018141906383863694
+Effective Dates,such increase,107,0.016730656158621154
+Effective Dates,the eighth,59,0.012115626548350014
+Effectiveness,become effective,123,0.020769144019261235
+Effectiveness,shall become,118,0.015072582199589705
+Effectiveness,amendment shall,80,0.010833325127127553
+Effectiveness,effective as,77,0.009835498553969554
+Effectiveness,this amendment,149,0.00979352559603264
+Effectiveness,counterparts of,30,0.008897657306371144
+Employment,to employ,90,0.014834317447325752
+Employment,hereby accepts,80,0.011837734579920349
+Employment,employ executive,66,0.011583474723449727
+Employment,hereby employs,55,0.011298885954221044
+Employment,such employment,69,0.009308006996109274
+Employment,accepts such,55,0.009065416217810183
+Enforceability,creditors rights,141,0.020488261035327124
+Enforceability,bankruptcy insolvency,149,0.0196046060701125
+Enforceability,rights generally,112,0.017217747679204636
+Enforceability,enforceable against,145,0.016164800838006144
+Enforceability,valid and,195,0.015206146623125975
+Enforceability,legal valid,112,0.013508266776528537
+Enforcements,threatened breach,53,0.00755885791470419
+Enforcements,bond or,41,0.006282975901908889
+Enforcements,specific performance,54,0.006190386235048848
+Enforcements,adequate remedy,37,0.006176750402325129
+Enforcements,damages would,35,0.005842872002199446
+Enforcements,an adequate,31,0.005175115201948081
+Entire Agreements,subject matter,2708,0.02201899440169429
+Entire Agreements,all prior,1323,0.02184838058512846
+Entire Agreements,entire agreement,1553,0.019676472083747794
+Entire Agreements,matter hereof,1715,0.01887191037529601
+Entire Agreements,the entire,1857,0.017997633135401852
+Entire Agreements,prior agreements,829,0.016571329575078488
+Erisa,of erisa,522,0.04947223499016272
+Erisa,erisa affiliate,186,0.023150940690120952
+Erisa,any erisa,149,0.018545646036709794
+Erisa,erisa or,143,0.017798841498318795
+Erisa,pension plan,123,0.015309493037015467
+Erisa,multiemployer plan,148,0.014026610686866059
+Existence,effect its,129,0.026843204283243587
+Existence,legal existence,119,0.024762335734154938
+Existence,keep in,167,0.024289560469612288
+Existence,preserve renew,130,0.022979666111140887
+Existence,done all,125,0.02209583279917393
+Existence,renew and,123,0.021742299474387147
+Expenses,and expenses,1027,0.01379395080166431
+Expenses,expenses incurred,670,0.011292494093207308
+Expenses,fees and,788,0.01088018727274522
+Expenses,costs and,572,0.009093790850255482
+Expenses,expenses of,417,0.00907244470856456
+Expenses,all reasonable,362,0.008469918345909455
+Fees,days elapsed,198,0.013011665781795429
+Fees,commitment fee,136,0.010861849837455143
+Fees,basis of,231,0.00999920127520765
+Fees,actual days,107,0.00854572009270368
+Fees,commitment fees,106,0.008465853549781214
+Fees,a year,129,0.007889621969059344
+Financial Statements,financial statements,1896,0.02214647981055277
+Financial Statements,the sec,1320,0.019144060562049432
+Financial Statements,cash flows,452,0.01703692091920491
+Financial Statements,and cash,450,0.01696153631336772
+Financial Statements,the periods,547,0.013412116368200763
+Financial Statements,such financial,535,0.013117883467984294
+Forfeitures,be forfeited,145,0.017241228248211022
+Forfeitures,shall forfeit,46,0.010460610762700717
+Forfeitures,restricted stock,152,0.009554628547901779
+Forfeitures,restricted shares,73,0.007956696887208022
+Forfeitures,the participant,195,0.007477315389477273
+Forfeitures,forfeited and,35,0.006761187358154418
+Further Assurances,such further,540,0.020118337844260654
+Further Assurances,and take,281,0.012254135347372993
+Further Assurances,instruments and,379,0.01085301086003735
+Further Assurances,execute and,530,0.009406554844473594
+Further Assurances,and deliver,614,0.008700675917840739
+Further Assurances,further actions,146,0.00836168646736387
+General,in dollars,154,0.004263638776083274
+General,all payments,238,0.004030852726073878
+General,business day,260,0.0037500315565858356
+General,of credit,465,0.0037280300541818806
+General,is owed,86,0.0036601663154317387
+General,day and,137,0.0035621351169654075
+Governing Laws,be governed,2500,0.020212220272162983
+Governing Laws,governed by,2653,0.02010284251740821
+Governing Laws,the state,4106,0.01966778898106744
+Governing Laws,and construed,1787,0.01877418595321583
+Governing Laws,laws of,3361,0.01566722411908157
+Governing Laws,state of,3737,0.015623461643816951
+Headings,for convenience,424,0.059884443318988866
+Headings,only and,417,0.052185001870549794
+Headings,the headings,259,0.047592140026405175
+Headings,of reference,245,0.042279680157407164
+Headings,reference only,248,0.040452462071970126
+Headings,are for,294,0.038235752907000355
+Indemnifications,willful misconduct,345,0.006630099641947667
+Indemnifications,and against,415,0.006527270460409223
+Indemnifications,losses damages,232,0.005556954255744556
+Indemnifications,gross negligence,286,0.005496256514774008
+Indemnifications,damages penalties,193,0.005157349126332043
+Indemnifications,negligence or,263,0.0050542498719774965
+Indemnity,interest period,109,0.007697661900456978
+Indemnity,willful misconduct,116,0.007693438075062805
+Indemnity,gross negligence,107,0.007096533396825175
+Indemnity,to indemnify,122,0.006348126813039745
+Indemnity,negligence or,93,0.006168015008455526
+Indemnity,such lender,182,0.00612294145984221
+Insurances,such insurance,541,0.020110648681432818
+Insurances,insurance policies,499,0.015262728639932648
+Insurances,the insurance,337,0.014746976877914698
+Insurances,financially sound,253,0.01107117255226237
+Insurances,sound and,240,0.010502298073292365
+Insurances,and reputable,237,0.010371019347376213
+Integration,matter hereof,273,0.024812485527667315
+Integration,subject matter,357,0.02397578966117168
+Integration,be integrated,91,0.021495203473785206
+Integration,integrated with,87,0.020550359365047396
+Integration,offer or,68,0.01606234984854279
+Integration,all prior,106,0.01445843064807522
+Intellectual Property,intellectual property,1488,0.035870863767092885
+Intellectual Property,the intellectual,415,0.022478282447794876
+Intellectual Property,property rights,542,0.01927742350673895
+Intellectual Property,use all,239,0.012945324108489097
+Intellectual Property,any intellectual,166,0.011808311077928655
+Intellectual Property,service marks,180,0.010876969693338888
+Interests,per annum,228,0.023826522673697653
+Interests,bear interest,216,0.021335716810693114
+Interests,base rate,162,0.01936921044605336
+Interests,shall bear,196,0.01543613598897622
+Interests,interest shall,146,0.01525733469456078
+Interests,interest on,195,0.0147776191056637
+Interpretations,the words,166,0.01481156445243828
+Interpretations,the singular,93,0.008736750041853546
+Interpretations,references to,116,0.00805698559858864
+Interpretations,the plural,84,0.007891258102319332
+Interpretations,or interpretation,91,0.007740949248854359
+Interpretations,the word,62,0.007680311924041363
+Jurisdictions,or proceeding,400,0.0208493058035383
+Jurisdictions,action or,351,0.013141231745003045
+Jurisdictions,new york,255,0.01124267691584248
+Jurisdictions,jurisdiction of,190,0.011131568998593768
+Jurisdictions,courts of,109,0.010155783599406207
+Jurisdictions,and unconditionally,117,0.00999269326896755
+Liens,valid leasehold,93,0.01672265763489693
+Liens,or suffer,90,0.016183217066029286
+Liens,suffer to,90,0.016183217066029286
+Liens,create incur,74,0.015663844170027523
+Liens,to exist,109,0.012654183775951455
+Liens,permitted liens,120,0.012174709945889251
+Litigations,pending or,873,0.02059122724574176
+Litigations,before any,450,0.016163887789576035
+Litigations,threatened against,521,0.015014924744749943
+Litigations,no actions,282,0.013302923443984366
+Litigations,the knowledge,708,0.011672389850682663
+Litigations,actions suits,356,0.010924593732818634
+Miscellaneous,constitute one,97,0.006766887475612047
+Miscellaneous,one and,95,0.006167932337565921
+Miscellaneous,counterparts each,98,0.005975471928273847
+Miscellaneous,an original,127,0.005835882817828213
+Miscellaneous,executed in,135,0.005752481212161254
+Miscellaneous,be executed,156,0.005614834274596942
+Modifications,signed by,147,0.01961149076721715
+Modifications,writing signed,59,0.011613311718810799
+Modifications,be modified,71,0.0115144057896134
+Modifications,and signed,55,0.01132133770523619
+Modifications,writing and,63,0.010987682697655406
+Modifications,except by,45,0.00971600179465477
+No Conflicts,bound or,495,0.0095063230722765
+No Conflicts,or result,597,0.00831430096815171
+No Conflicts,or both,526,0.008267527843182533
+No Conflicts,asset of,376,0.008261640660157572
+No Conflicts,conflict with,921,0.008231596683220327
+No Conflicts,a default,843,0.007977324612440393
+No Defaults,no default,196,0.030486686432098665
+No Defaults,default or,228,0.020038337793198253
+No Defaults,or event,198,0.019624874163194476
+No Defaults,occurred and,160,0.016896646661824624
+No Defaults,of default,257,0.014502199660774595
+No Defaults,in default,107,0.012955664221695598
+No Waivers,power or,410,0.024728498523392588
+No Waivers,or privilege,317,0.022080976286970967
+No Waivers,a waiver,516,0.021093701393628858
+No Waivers,right power,271,0.015050722118297003
+No Waivers,privilege hereunder,175,0.01475504280985764
+No Waivers,in exercising,185,0.014516868025446954
+Non-Disparagement,disparage the,79,0.013162389460675081
+Non-Disparagement,any disparaging,63,0.010496589063576332
+Non-Disparagement,disparaging or,60,0.009996751489120315
+Non-Disparagement,or disparaging,57,0.0094969139146643
+Non-Disparagement,not make,96,0.008772429444775418
+Non-Disparagement,from making,69,0.008035543846451007
+Notices,sent by,1232,0.017503077240129127
+Notices,all notices,1304,0.016605842205802107
+Notices,addressed to,985,0.011514438249461346
+Notices,other communications,951,0.010346317855845283
+Notices,writing and,1392,0.010313800192146094
+Notices,address as,849,0.009924627486083942
+Organizations,good standing,594,0.04001895524460151
+Organizations,validly existing,387,0.0271429376697411
+Organizations,standing under,363,0.025459654713478084
+Organizations,duly organized,283,0.02070577933072718
+Organizations,existing and,319,0.01992914115162955
+Organizations,organized validly,229,0.0175215132782968
+Participations,such lender's,802,0.020526935731922658
+Participations,natural person,249,0.013842194306024081
+Participations,a natural,247,0.013731012022441558
+Participations,lender's rights,401,0.012226185253109737
+Participations,deal solely,212,0.011785322059747411
+Participations,to deal,212,0.011785322059747411
+Payments,immediately available,170,0.005493524431069645
+Payments,all payments,231,0.0054161504366154
+Payments,available funds,164,0.00529963533350248
+Payments,of principal,145,0.004271684218067255
+Payments,in immediately,103,0.003947804812897403
+Payments,business day,181,0.0036140895910427963
+Positions,serve as,100,0.01944915189622473
+Positions,executive officer,152,0.017294973772356163
+Positions,chief executive,143,0.016744665397427517
+Positions,executive shall,187,0.014473043910842726
+Positions,president and,64,0.014375592732806638
+Positions,such duties,59,0.014020713936045455
+Powers,powers as,41,0.012707925458539328
+Powers,such powers,40,0.012397976057111541
+Powers,and powers,25,0.00825088761031726
+Powers,incidental thereto,25,0.00825088761031726
+Powers,such actions,29,0.007693116960549111
+Powers,good standing,32,0.0074747640364000115
+Publicity,press release,728,0.03941767902746977
+Publicity,any press,320,0.01732645231976693
+Publicity,such press,250,0.016451172456341343
+Publicity,or trading,189,0.01464073685262577
+Publicity,such disclosure,350,0.014176537250889925
+Publicity,public statement,218,0.012858578304357618
+Qualifications,permits if,12,0.033845909203415826
+Qualifications,the lawful,13,0.03286607978742593
+Qualifications,good standing,21,0.03210204344643252
+Qualifications,lawful issuance,9,0.029882142519028713
+Qualifications,the fcc,10,0.028204924336179854
+Qualifications,all authorizations,11,0.02780975982012963
+Records,books and,157,0.015478332376610957
+Records,and records,188,0.014971759856473409
+Records,such records,96,0.014659206390612514
+Records,records of,115,0.012628995371693048
+Records,records and,103,0.010691431508024362
+Records,business hours,65,0.007600710323627363
+Releases,cash collateral,386,0.014978988384116255
+Releases,exposure or,220,0.011211985579307453
+Releases,fronting exposure,220,0.009524413594145681
+Releases,the released,242,0.0075346428084363875
+Releases,causes of,234,0.006886377555192116
+Releases,and forever,159,0.006883553461223471
+Remedies,specific performance,270,0.007291976293318739
+Remedies,threatened breach,209,0.007022376262326676
+Remedies,remedy at,168,0.006607316443093316
+Remedies,at law,423,0.006211913484372093
+Remedies,and payable,322,0.005997773063813766
+Remedies,remedies available,148,0.0049727831905471195
+Representations,and warranties,344,0.01240921710927231
+Representations,representations and,346,0.012078749539296973
+Representations,be true,164,0.010001834100748244
+Representations,and correct,237,0.009153263093543574
+Representations,represents and,278,0.009108604052374339
+Representations,and warrants,275,0.009010309764039362
+Sales,and leaseback,75,0.012254311298531377
+Sales,such property,113,0.012010564020280326
+Sales,leaseback transaction,71,0.01160074802927637
+Sales,shall sell,90,0.011197098128749276
+Sales,any arrangement,66,0.010783793942707611
+Sales,or transferred,86,0.009821654104618245
+Sanctions,of sanctions,98,0.037549290355725594
+Sanctions,individual or,99,0.03400090419536515
+Sanctions,sanctions or,69,0.023697599893739346
+Sanctions,anti corruption,72,0.02269922227135264
+Sanctions,corruption laws,66,0.020807620415406586
+Sanctions,lend contribute,46,0.017625177105748745
+Severability,or unenforceable,2189,0.02733127322032074
+Severability,invalid illegal,922,0.023738409870838084
+Severability,illegal or,1025,0.020209062479961834
+Severability,such provision,1175,0.015204271379649463
+Severability,invalid or,1085,0.01514045356993806
+Severability,be invalid,735,0.014491376510021413
+Solvency,consolidated basis,286,0.02679819770943747
+Solvency,a consolidated,285,0.02670449771744643
+Solvency,debts and,205,0.023344823337489298
+Solvency,subsidiaries on,186,0.01742819851033346
+Solvency,such debts,127,0.01702490651822221
+Solvency,its debts,118,0.015818417079923
+Specific Performance,specific performance,318,0.02166251848906007
+Specific Performance,at law,431,0.01596476917825624
+Specific Performance,remedy at,160,0.015872164297023796
+Specific Performance,adequate remedy,129,0.012796932464475434
+Specific Performance,equitable relief,156,0.011736012384336124
+Specific Performance,not performed,126,0.01147386992003489
+Submission To Jurisdiction,or proceeding,795,0.02333268443360178
+Submission To Jurisdiction,irrevocably and,317,0.016630762951384447
+Submission To Jurisdiction,and unconditionally,335,0.01611044263189151
+Submission To Jurisdiction,courts of,305,0.016001207256063903
+Submission To Jurisdiction,the courts,298,0.015633966433793584
+Submission To Jurisdiction,new york,584,0.01449800909368611
+Subsidiaries,equity interests,418,0.017158105322333736
+Subsidiaries,each subsidiary,380,0.016774864548544707
+Subsidiaries,capital stock,343,0.015141522474081143
+Subsidiaries,are fully,173,0.014643529003160509
+Subsidiaries,validly issued,205,0.014277636888979836
+Subsidiaries,issued and,268,0.013963031419579412
+Successors,permitted hereby,298,0.028323132012970327
+Successors,otherwise transfer,301,0.02178345875576981
+Successors,assigns permitted,297,0.02149397757629114
+Successors,of subsection,224,0.021289871043306555
+Successors,assign or,305,0.017709744878785856
+Successors,may assign,294,0.017071032768403417
+Survival,shall survive,1648,0.022316730174273238
+Survival,survive the,1137,0.01883301133330476
+Survival,and warranties,536,0.010389980169731384
+Survival,representations and,545,0.01022365929320111
+Survival,replacement of,305,0.009995387295256283
+Survival,repayment satisfaction,194,0.009773366911146128
+Tax Withholdings,tax withholding,212,0.015347324497674593
+Tax Withholdings,be withheld,236,0.013403928659979266
+Tax Withholdings,to withhold,132,0.011910188159592354
+Tax Withholdings,withholding obligations,139,0.011512846143032702
+Tax Withholdings,to satisfy,232,0.010939940292556107
+Tax Withholdings,withholding obligation,120,0.010827443781447593
+Taxes,tax returns,636,0.01380227509641371
+Taxes,contested in,424,0.011137887737941332
+Taxes,all taxes,474,0.010286601251100784
+Taxes,being contested,353,0.009272816913899268
+Taxes,appropriate proceedings,349,0.00916774250127718
+Taxes,filed and,283,0.009034842623339607
+Terminations,closing has,170,0.009494505331546225
+Terminations,consummated on,163,0.00910355511201197
+Terminations,such termination,408,0.009067784481533309
+Terminations,termination will,161,0.008991855049287897
+Terminations,sue for,157,0.00876845492383975
+Terminations,be terminated,308,0.00860090482975364
+Terms,initial term,452,0.01423833059649952
+Terms,commence on,243,0.009755385700211682
+Terms,renewal term,191,0.009318987204250135
+Terms,shall commence,271,0.008536698211618076
+Terms,term of,729,0.008330954646249177
+Terms,term shall,217,0.007614244519043751
+Titles,title to,175,0.01779196358503877
+Titles,and clear,162,0.013570003424210206
+Titles,clear of,159,0.01331870706450261
+Titles,free and,162,0.013108362642494977
+Titles,and marketable,82,0.012695944347414275
+Titles,good and,103,0.012093950185626815
+Transactions With Affiliates,transaction with,283,0.021651005408068316
+Transactions With Affiliates,arm's length,223,0.020083563802466942
+Transactions With Affiliates,length transaction,151,0.01359918445817268
+Transactions With Affiliates,officer director,263,0.012990703513378011
+Transactions With Affiliates,providing for,204,0.01284176219879362
+Transactions With Affiliates,less favorable,206,0.012068698876522904
+Use Of Proceeds,corporate purposes,438,0.031134746337312405
+Use Of Proceeds,general corporate,433,0.03077932685857596
+Use Of Proceeds,working capital,396,0.028149222715926285
+Use Of Proceeds,proceeds of,1055,0.025414577053626996
+Use Of Proceeds,the proceeds,1042,0.024353185110754436
+Use Of Proceeds,use the,618,0.024093544835725893
+Vacations,paid vacation,193,0.04947840869884168
+Vacations,0 weeks,144,0.04118521076046593
+Vacations,weeks of,99,0.028314832397820327
+Vacations,vacation time,71,0.023904597397657153
+Vacations,of paid,83,0.02373869786887967
+Vacations,calendar year,180,0.023318630760910775
+Venues,or proceeding,98,0.01563767087191752
+Venues,inconvenient forum,45,0.014175160111581972
+Venues,the state,103,0.012808775032381401
+Venues,jurisdiction of,68,0.012196243285811979
+Venues,such court,52,0.011685647857624475
+Venues,exclusive jurisdiction,39,0.011668255997159673
+Vesting,vesting date,282,0.019803077442070206
+Vesting,shall vest,212,0.01867198118205375
+Vesting,the vesting,233,0.013674227276856457
+Vesting,vest on,80,0.009291048646560413
+Vesting,restricted stock,199,0.008390029791235208
+Vesting,grant date,105,0.00800753269845245
+Waiver Of Jury Trials,trial by,814,0.026492307533635153
+Waiver Of Jury Trials,by jury,794,0.02584139088661709
+Waiver Of Jury Trials,jury in,565,0.02123679374785537
+Waiver Of Jury Trials,a trial,408,0.018562825432814966
+Waiver Of Jury Trials,has represented,230,0.014971082881415443
+Waiver Of Jury Trials,represented expressly,228,0.014840899552011828
+Waivers,a waiver,731,0.014448063018217506
+Waivers,waiver of,701,0.010688630283715774
+Waivers,power or,274,0.007990125701046954
+Waivers,waiver by,260,0.007928798498619402
+Waivers,no waiver,223,0.0071331098603201705
+Waivers,the waiver,169,0.006411757123524581
+Warranties,and warranties,582,0.022922911867442074
+Warranties,representations and,579,0.0220691344520933
+Warranties,correct in,202,0.01263217597158255
+Warranties,and correct,279,0.011765019800021358
+Warranties,be true,172,0.011453154127704248
+Warranties,true and,288,0.010977393302595631
+Withholdings,to withhold,212,0.01641146818181858
+Withholdings,withhold from,174,0.013469789922813362
+Withholdings,be withheld,251,0.012230964593916153
+Withholdings,to satisfy,241,0.009750140909184775
+Withholdings,federal state,298,0.009120156293214284
+Withholdings,tax withholding,143,0.008881774344806173
