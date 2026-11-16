@@ -1,0 +1,5 @@
+normalisation,types,types_in_2plus_docs
+raw text,27843,17393
+repaired,27642,17287
++ lower-cased,21352,13001
++ digits masked,17502,11328

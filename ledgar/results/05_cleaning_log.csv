@@ -1,0 +1,5 @@
+step,rows_removed,rows_left
+input,0,60000
+fewer than 4 words,2,59998
+template duplicates with conflicting labels,39,59959
+repeats of an earlier template,2012,57947

@@ -87,3 +87,66 @@ flag_duplicates <- function(text, label = NULL, method = c("template", "exact"))
   }
   out
 }
+
+
+#' Clean a labelled text corpus for training
+#'
+#' Applies the cleaning decisions that came out of the exploratory analysis,
+#' in order, and records how many rows each step removes:
+#'
+#' 1. repair encoding noise with [normalize_text()] (no rows removed);
+#' 2. drop texts with fewer than `min_words` words -- headings and bare
+#'    cross-references that carry no evidence about the class;
+#' 3. drop every member of a template-duplicate group whose labels disagree
+#'    (the label is not recoverable from the text);
+#' 4. keep one representative of each remaining template-duplicate group, so
+#'    boilerplate that was filed many times does not get extra weight.
+#'
+#' Only ever apply this to training data: held-out data must be scored as
+#' it comes.
+#'
+#' @param data A data frame.
+#' @param text,label Column names (strings) of the text and label columns.
+#' @param min_words Minimum number of words a text must have to be kept.
+#' @param drop_conflicts,drop_repeats Toggle steps 3 and 4.
+#' @return `data` with cleaned text and the dropped rows removed. The
+#'   attribute `"cleaning_log"` is a tibble with one row per step
+#'   (`step`, `rows_removed`, `rows_left`).
+#' @examples
+#' d <- data.frame(
+#'   text = c("Sec. 1 Notices must be given in writing.", "Sec. 9 Notices must be given in writing.",
+#'            "See above.", "Taxes are borne by the Seller alone."),
+#'   label = c("Notices", "Notices", "Taxes", "Taxes"))
+#' out <- clean_corpus(d, min_words = 3)
+#' attr(out, "cleaning_log")
+#' @export
+clean_corpus <- function(data, text = "text", label = "label", min_words = 4L,
+                         drop_conflicts = TRUE, drop_repeats = TRUE) {
+  stopifnot(is.data.frame(data), all(c(text, label) %in% names(data)))
+  log <- tibble::tibble(step = "input", rows_removed = 0L, rows_left = nrow(data))
+  record <- function(step, before, after) {
+    tibble::add_row(log, step = step, rows_removed = before - nrow(after), rows_left = nrow(after))
+  }
+
+  data[[text]] <- normalize_text(data[[text]])
+
+  before <- nrow(data)
+  data <- data[stringr::str_count(data[[text]], "\\S+") >= min_words, , drop = FALSE]
+  log <- record(sprintf("fewer than %d words", min_words), before, data)
+
+  dups <- flag_duplicates(data[[text]], data[[label]])
+  if (drop_conflicts) {
+    before <- nrow(data)
+    keep <- !dups$label_conflict
+    data <- data[keep, , drop = FALSE]
+    dups <- dups[keep, , drop = FALSE]
+    log <- record("template duplicates with conflicting labels", before, data)
+  }
+  if (drop_repeats) {
+    before <- nrow(data)
+    data <- data[!dups$is_repeat, , drop = FALSE]
+    log <- record("repeats of an earlier template", before, data)
+  }
+  attr(data, "cleaning_log") <- log
+  data
+}
