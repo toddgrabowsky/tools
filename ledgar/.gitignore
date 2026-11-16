@@ -1,0 +1,10 @@
+# raw and derived data are re-creatable with analysis/01_acquire.R
+data/raw/*.parquet
+data/processed/
+# large fitted objects
+models/*.rds
+*.Rcheck/
+*.tar.gz
+.Rhistory
+.RData
+Rplots.pdf
