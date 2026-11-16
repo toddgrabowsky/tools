@@ -1,0 +1,11 @@
+artefact,share
+contains non-ASCII characters,0.51085
+contains digits,0.39455
+contains typographic quotes,0.33625
+has repeated whitespace,0.13305
+contains currency amount,0.03281666666666667
+has an ALL-CAPS run of 5+ words,0.0302
+"starts with enumerator, e.g. (a) or 5.1",0.0217
+contains blank placeholder (___ or [ ]),0.00285
+shorter than 10 words,0.0021666666666666666
+ends without terminal punctuation,0

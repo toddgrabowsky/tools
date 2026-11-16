@@ -24,6 +24,9 @@ paths <- list(
 )
 walk(paths, dir.create, recursive = TRUE, showWarnings = FALSE)
 
+# Scripts must behave the same under any locale (Rscript defaults to C here).
+invisible(Sys.setlocale("LC_CTYPE", "C.UTF-8"))
+
 SEED <- 20261116L
 set.seed(SEED)
 theme_set(theme_provision())

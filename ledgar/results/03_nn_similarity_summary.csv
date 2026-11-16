@@ -1,0 +1,4 @@
+split,median_sim,share_ge_0.95,share_ge_0.8,share_lt_0.5
+train (5k sample vs rest of train),0.676160211367191,0.1576,0.3734,0.3418
+validation vs train,0.6753902224448634,0.1466,0.3623,0.3431
+test vs train,0.6721259880357533,0.1519,0.3714,0.3506

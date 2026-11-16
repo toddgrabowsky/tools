@@ -1,0 +1,8 @@
+check,n,of,share
+train: rows that repeat an earlier exact text,0,60000,0
+train: rows that repeat an earlier template,2036,60000,0.033933333333333336
+train: rows in a template group with conflicting labels,39,60000,6.5e-4
+validation: rows whose exact text is in train,0,10000,0
+test: rows whose exact text is in train,0,10000,0
+validation: rows whose template is in train,543,10000,0.0543
+test: rows whose template is in train,580,10000,0.058
