@@ -14,5 +14,6 @@
 #' @keywords internal
 #' @importFrom rlang .data .env %||%
 #' @importFrom methods as new
+#' @importClassesFrom SparseM matrix.csr
 #' @importFrom stats predict setNames
 "_PACKAGE"
