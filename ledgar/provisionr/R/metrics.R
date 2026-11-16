@@ -112,7 +112,7 @@ bootstrap_metrics <- function(truth, estimate, n_boot = 1000L, conf = 0.95, seed
     dplyr::summarise(lower = stats::quantile(.data$value, alpha),
                      upper = stats::quantile(.data$value, 1 - alpha),
                      std_error = stats::sd(.data$value), .by = "metric") |>
-    dplyr::mutate(estimate = unlist(point[.data$metric]), .after = "metric")
+    dplyr::mutate(estimate = unname(unlist(point[.data$metric])), .after = "metric")
   attr(out, "replicates") <- reps
   out
 }
