@@ -1,0 +1,23 @@
+{
+ "model": "nlpaueb/legal-bert-small-uncased",
+ "parameters": 35119716,
+ "max_length": 256,
+ "epochs": 3,
+ "batch_size": 32,
+ "lr": 0.0002,
+ "weight_decay": 0.01,
+ "warmup": 0.06,
+ "seed": 20261116,
+ "threads": 4,
+ "train_rows": 60000,
+ "mean_train_tokens": 120.65585,
+ "share_truncated": 0.1209,
+ "train_minutes": 176.9268289089203,
+ "selected_epoch": 3,
+ "val_accuracy": 0.8579,
+ "val_macro_f1": 0.7746333365703657,
+ "torch": "2.15.0+cu132",
+ "test_predict_seconds": 109.20974588394165,
+ "test_accuracy": 0.861,
+ "test_macro_f1": 0.7813819659533366
+}
