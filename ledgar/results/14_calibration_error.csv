@@ -1,0 +1,4 @@
+model,ece
+TF-IDF + linear SVM,0.04128431983530337
+Legal-BERT-small (fine-tuned),0.008316207274010015
+Ensemble,0.030260882696582805

@@ -20,6 +20,7 @@ library(provisionr)
 | Models | `fit_classifier()` + `predict()` — engines `svm`, `logreg`, `nb`, `centroid`, `majority`, `xgb` |
 | Resampling | `assign_folds()`, `cv_classifier()`, `summarise_cv()`, `target_shuffle()` |
 | Metrics | `classification_metrics()`, `per_class_metrics()`, `top_k_accuracy()`, `confusion_pairs()`, `bootstrap_metrics()` |
+| Model comparison | `compare_predictions()` (paired bootstrap + McNemar), `softmax_scores()`, `fit_temperature()` |
 | Plots | `theme_provision()`, `plot_cv_summary()`, `plot_target_shuffle()`, `plot_confusion()`, `plot_per_class()` |
 
 ## Design rules

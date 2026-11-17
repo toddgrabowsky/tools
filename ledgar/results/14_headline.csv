@@ -1,0 +1,5 @@
+model,metric,estimate,lower,upper
+TF-IDF + linear SVM,accuracy,0.8866,0.8804,0.8927
+TF-IDF + linear SVM,macro_f1,0.8360628302407067,0.8218687051322269,0.8456467082208751
+Legal-BERT-small (fine-tuned),accuracy,0.861,0.8546,0.8674
+Legal-BERT-small (fine-tuned),macro_f1,0.7813819659533368,0.7683586918168727,0.7901904251907139

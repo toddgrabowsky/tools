@@ -1,0 +1,5 @@
+outcome,n,share
+both correct,8351,0.8351
+only SVM correct,515,0.0515
+only BERT correct,259,0.0259
+both wrong,875,0.0875

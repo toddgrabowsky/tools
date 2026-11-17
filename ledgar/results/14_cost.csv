@@ -1,0 +1,3 @@
+model,parameters,train_minutes,test_predict_seconds,hardware
+TF-IDF + linear SVM,21619300,2.6113249999999995,3.7059999999999995,1 CPU core
+Legal-BERT-small (fine-tuned),35119716,176.9268289089203,109.20974588394165,4 CPU cores
