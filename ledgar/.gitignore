@@ -8,3 +8,5 @@ models/*.rds
 .Rhistory
 .RData
 Rplots.pdf
+.venv/
+models/*
