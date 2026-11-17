@@ -49,6 +49,19 @@ drift <- res("13_temporal_drift")
 curve <- res("13_learning_curve")
 bysim <- res("13_accuracy_by_similarity")
 bench <- res("12_benchmark_comparison")
+tf_head <- res("14_headline")
+tf_diff <- res("14_paired_difference")
+tf_agree <- res("14_agreement")
+tf_mcn <- res("14_mcnemar")
+tf_ens <- res("14_ensemble")
+tf_cost <- res("14_cost")
+tf_sum <- jsonlite::read_json(file.path("results", "14_finetune_summary.json"))
+tf_hist <- res("14_finetune_history")
+tf_pc <- res("14_per_class")
+tf_sl <- res("14_slices")
+tf_ens_diff <- res("14_ensemble_vs_svm")
+tf_ece <- res("14_calibration_error")
+tf_acc <- function(m) tf_head$estimate[tf_head$model == m & tf_head$metric == "accuracy"]
 
 winner <- tuned$model[1]
 acc <- filter(tm, metric == "accuracy")
@@ -79,6 +92,15 @@ TF-IDF + SVM baseline and 88.6 / 83.6 for its best transformer
 (RoBERTa-large). A carefully tuned sparse linear model is therefore on par
 with the published transformer results on this task; differences of a few
 tenths of a point are inside the bootstrap interval.
+
+**Against a fine-tuned transformer.** Legal-BERT-small, fine-tuned on the
+same training split within a CPU-only budget (`r tf_sum$epochs` epochs,
+`r round(tf_sum$train_minutes / 60, 1)` h), reaches
+`r pct(tf_acc("Legal-BERT-small (fine-tuned)"))` accuracy and
+`r pct(tf_head$estimate[4])` macro-F1 on test — `r pp(tf_diff$difference[1])`
+and `r pp(tf_diff$difference[2])` relative to the SVM trained on the same
+split (section 7). It had not converged, so this understates what a
+transformer can do with more compute.
 
 **Why the number can be trusted.**
 
@@ -453,7 +475,137 @@ rep_cv |> transmute(Metric = metric, Mean = pct(mean, 2), `SD between folds` = p
                     `SD between repeats` = pts(sd_between_repeats)) |> knitr::kable()
 ```
 
-## 7. Limitations
+## 7. Comparison with a fine-tuned transformer
+
+To see what a pretrained language model adds, an open-source legal-domain
+encoder was fine-tuned on the same data: **Legal-BERT-small**
+(`nlpaueb/legal-bert-small-uncased`, `r format(round(tf_sum$parameters / 1e6), nsmall = 0)`M
+parameters, CC-BY-SA-4.0). The protocol mirrors the SVM study — weights
+trained on the train split only, epoch and hyper-parameters chosen on
+validation, the test split scored once at the end — so the like-for-like
+counterpart is the SVM fitted on the train split only.
+
+**Compute constraint.** The environment has 4 CPU cores and no GPU. That
+dictated the model (Legal-BERT-base would have needed about 2.6 hours per
+epoch) and the budget: `r tf_sum$epochs` epochs at `r tf_sum$max_length` word
+pieces, `r round(tf_sum$train_minutes / 60, 1)` hours of training. Learning
+rate and input length were chosen in five small pilot runs
+(`results/14_pilot_runs.csv`). Published LEDGAR results for transformers use
+larger models and up to 20 epochs on GPUs, so this is a comparison at equal
+*data*, not at equal *effort*.
+
+```{r}
+fig("14_training_curve")
+```
+
+Validation accuracy was still rising at the last epoch
+(`r paste(pct(tf_hist$val_accuracy), collapse = " → ")`), so the transformer
+had not converged within this budget; more epochs would probably narrow the
+gap reported below, though the per-epoch gain was already shrinking.
+
+### Headline
+
+```{r}
+fig("14_headline")
+```
+
+```{r}
+tf_head |>
+  mutate(value = sprintf("%s [%s, %s]", pct(estimate), pct(lower), pct(upper)),
+         metric = recode(metric, accuracy = "Accuracy (micro-F1)", macro_f1 = "Macro-F1")) |>
+  select(Model = model, metric, value) |>
+  pivot_wider(names_from = metric, values_from = value) |>
+  knitr::kable()
+```
+
+On accuracy the transformer is `r pp(tf_diff$difference[tf_diff$metric == "accuracy"], 2)`
+relative to the SVM (95% paired-bootstrap interval
+`r pp(tf_diff$lower[tf_diff$metric == "accuracy"], 2)` to
+`r pp(tf_diff$upper[tf_diff$metric == "accuracy"], 2)`; exact McNemar
+p = `r format(signif(tf_mcn$p_value, 2), scientific = TRUE)`), and on macro-F1
+`r pp(tf_diff$difference[tf_diff$metric == "macro_f1"], 2)`
+(`r pp(tf_diff$lower[tf_diff$metric == "macro_f1"], 2)` to
+`r pp(tf_diff$upper[tf_diff$metric == "macro_f1"], 2)`).
+
+```{r}
+tf_agree |> transmute(Outcome = outcome, `Test provisions` = format(n, big.mark = ","), Share = pct(share)) |>
+  knitr::kable()
+```
+
+The SVM is the better model here, clearly so on macro-F1: the fine-tuned
+network is weaker on small and confusable classes.
+
+### Where they differ
+
+```{r, out.width = "75%"}
+fig("14_per_class")
+```
+
+The SVM has the higher F1 on `r sum(tf_pc$diff < 0)` of `r nrow(tf_pc)` classes,
+the transformer on `r sum(tf_pc$diff > 0)`. Both find the same classes hard
+(correlation of per-class F1 `r sprintf("%.2f", cor(tf_pc$f1_svm, tf_pc$f1_bert))`),
+but the transformer collapses on some rare or near-synonymous ones — it never
+correctly predicts *Applicable Laws* or *Assigns*.
+
+```{r}
+fig("14_slices")
+```
+
+The gap is not uniform. On provisions unlike anything in the training data
+(similarity below 0.4) the two models are tied
+(`r pct(tf_sl$bert[tf_sl$slice == "< 0.4"])` vs `r pct(tf_sl$svm[tf_sl$slice == "< 0.4"])`).
+The SVM's lead comes from familiar boilerplate, where exact n-gram matches are
+decisive, and from the longest provisions, which the transformer only reads up
+to `r tf_sum$max_length` word pieces
+(`r pct(tf_sum$share_truncated, 0)` of provisions are truncated).
+
+### Do they complement each other?
+
+```{r}
+fig("14_ensemble")
+```
+
+Only a little. A weighted average of the two models' probabilities
+(temperatures and weight fitted on validation) improves on the SVM by
+`r pp(tf_ens_diff$difference[1], 2)` accuracy (95% interval
+`r pp(tf_ens_diff$lower[1], 2)` to `r pp(tf_ens_diff$upper[1], 2)`), with no
+reliable change in macro-F1. At least one of the two models is right on
+`r pct(tf_ens$estimate[tf_ens$model == "Oracle (either model correct)"])` of
+test provisions, so their errors overlap heavily.
+
+```{r}
+fig("14_confidence")
+```
+
+The transformer's temperature-scaled probabilities are better calibrated
+(expected calibration error `r pct(tf_ece$ece[2])` vs `r pct(tf_ece$ece[1])`
+for the SVM's soft-maxed margins). For deciding which predictions to trust,
+the SVM's confidence ranking is at least as good.
+
+### Cost
+
+```{r}
+tf_cost |>
+  transmute(Model = model, Parameters = format(parameters, big.mark = ","),
+            `Training time` = sprintf("%.1f min", train_minutes),
+            `Time to score 10,000 provisions` = sprintf("%.0f s", test_predict_seconds),
+            Hardware = hardware) |>
+  knitr::kable()
+```
+
+(The SVM training time is the measured cross-validation fit time scaled to
+the full training split.)
+
+**Takeaway.** With the data and hardware available here, the sparse linear
+model is more accurate, about `r round(tf_cost$train_minutes[2] / tf_cost$train_minutes[1])`
+times cheaper to train and about `r round(tf_cost$test_predict_seconds[2] / tf_cost$test_predict_seconds[1])`
+times faster to apply. That is not a general verdict on transformers for
+this task: larger published models trained for longer on GPUs reach
+88.2–88.6% accuracy, level with the SVM. Taken together, the evidence
+suggests that on LEDGAR a pretrained encoder needs far more compute to match
+a well-tuned bag of n-grams, and does not clearly beat it even then.
+
+## 8. Limitations
 
 * Test accuracy describes filings from the period right after the training
   data. Performance on later or structurally different contracts will be lower

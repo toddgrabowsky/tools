@@ -30,7 +30,9 @@ ledgar/
 │   ├── 10_select_refit.R  selection, validation hold-out check, refit
 │   ├── 11_target_shuffle.R  permutation test of the whole pipeline
 │   ├── 12_test_evaluation.R  one-shot test evaluation, bootstrap CIs
-│   └── 13_robustness.R  repeated/grouped CV, drift, learning curve, errors
+│   ├── 13_robustness.R  repeated/grouped CV, drift, learning curve, errors
+│   └── 14_transformer_comparison.R  fine-tuned Legal-BERT-small vs the SVM
+├── transformer/       Python: finetune.py (PyTorch), pilot.sh, train_full.sh
 ├── results/           every table the scripts produce (CSV, committed)
 ├── figures/           every figure the scripts produce (PNG, committed)
 ├── reports/           report.Rmd -> report.md, built from results/ + figures/
@@ -57,6 +59,20 @@ make check     # unit tests + R CMD check of provisionr
 Single steps run with `make 07` or `Rscript analysis/07_baselines.R` (from this
 directory). Expensive steps cache per-configuration results under
 `data/processed/`, so an interrupted run resumes.
+
+## Transformer comparison
+
+`transformer/finetune.py` fine-tunes `nlpaueb/legal-bert-small-uncased` on the
+train split (epoch chosen on validation, test scored once);
+`analysis/14_transformer_comparison.R` compares it with the SVM on the same
+test rows. It needs a Python virtualenv and about 3.5 CPU-hours:
+
+```sh
+python3 -m venv .venv && .venv/bin/pip install -r transformer/requirements.txt
+bash transformer/pilot.sh        # optional: learning-rate / length pilot (~1.2 h)
+bash transformer/train_full.sh   # ~3 h on 4 cores, resumable
+make 14 && make report
+```
 
 ## Evaluation protocol
 

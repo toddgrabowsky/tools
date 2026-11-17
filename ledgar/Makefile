@@ -10,8 +10,10 @@
 
 RSCRIPT := Rscript
 STEPS   := 01 02 03 04 05 06 07 08 09 10 11 12 13
+# step 14 needs the fine-tuned transformer (see transformer/); run it with `make 14`
+EXTRA   := 14
 
-.PHONY: all setup check report board clean $(STEPS)
+.PHONY: all setup check report board clean $(STEPS) $(EXTRA)
 
 all: $(STEPS) report
 
@@ -19,7 +21,7 @@ setup:
 	$(RSCRIPT) tools/install_deps.R
 	R CMD INSTALL provisionr
 
-$(STEPS):
+$(STEPS) $(EXTRA):
 	$(RSCRIPT) $(wildcard analysis/$@_*.R)
 
 report:

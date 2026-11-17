@@ -8,7 +8,9 @@ Classifying contract provisions: a LEDGAR study in R
 - [4. Models](#4-models)
 - [5. Validation of the final model](#5-validation-of-the-final-model)
 - [6. Robustness](#6-robustness)
-- [7. Limitations](#7-limitations)
+- [7. Comparison with a fine-tuned
+  transformer](#7-comparison-with-a-fine-tuned-transformer)
+- [8. Limitations](#8-limitations)
 - [Reproducing](#reproducing)
 
 ## Summary
@@ -37,6 +39,13 @@ on test, against 87.2 / 82.4 for LexGLUE’s TF-IDF + SVM baseline and
 sparse linear model is therefore on par with the published transformer
 results on this task; differences of a few tenths of a point are inside
 the bootstrap interval.
+
+**Against a fine-tuned transformer.** Legal-BERT-small, fine-tuned on
+the same training split within a CPU-only budget (3 epochs, 2.9 h),
+reaches 86.1% accuracy and 78.1% macro-F1 on test — -2.6 pp and -5.5 pp
+relative to the SVM trained on the same split (section 7). It had not
+converged, so this understates what a transformer can do with more
+compute.
 
 **Why the number can be trusted.**
 
@@ -372,7 +381,109 @@ degrades on newer filings — over the two periods this corpus covers.
 | accuracy | 87.97% | 0.26 pp          | 0.11 pp            |
 | macro_f1 | 82.41% | 0.51 pp          | 0.08 pp            |
 
-## 7. Limitations
+## 7. Comparison with a fine-tuned transformer
+
+To see what a pretrained language model adds, an open-source
+legal-domain encoder was fine-tuned on the same data:
+**Legal-BERT-small** (`nlpaueb/legal-bert-small-uncased`, 35M
+parameters, CC-BY-SA-4.0). The protocol mirrors the SVM study — weights
+trained on the train split only, epoch and hyper-parameters chosen on
+validation, the test split scored once at the end — so the like-for-like
+counterpart is the SVM fitted on the train split only.
+
+**Compute constraint.** The environment has 4 CPU cores and no GPU. That
+dictated the model (Legal-BERT-base would have needed about 2.6 hours
+per epoch) and the budget: 3 epochs at 256 word pieces, 2.9 hours of
+training. Learning rate and input length were chosen in five small pilot
+runs (`results/14_pilot_runs.csv`). Published LEDGAR results for
+transformers use larger models and up to 20 epochs on GPUs, so this is a
+comparison at equal *data*, not at equal *effort*.
+
+![](../figures/14_training_curve.png)<!-- -->
+
+Validation accuracy was still rising at the last epoch (80.9% → 84.1% →
+85.8%), so the transformer had not converged within this budget; more
+epochs would probably narrow the gap reported below, though the
+per-epoch gain was already shrinking.
+
+### Headline
+
+![](../figures/14_headline.png)<!-- -->
+
+| Model                         | Accuracy (micro-F1)    | Macro-F1               |
+|:------------------------------|:-----------------------|:-----------------------|
+| TF-IDF + linear SVM           | 88.7% \[88.0%, 89.3%\] | 83.6% \[82.2%, 84.6%\] |
+| Legal-BERT-small (fine-tuned) | 86.1% \[85.5%, 86.7%\] | 78.1% \[76.8%, 79.0%\] |
+
+On accuracy the transformer is -2.56 pp relative to the SVM (95%
+paired-bootstrap interval -3.11 pp to -2.01 pp; exact McNemar p =
+2.2e-20), and on macro-F1 -5.47 pp (-6.51 pp to -4.41 pp).
+
+| Outcome           | Test provisions | Share |
+|:------------------|:----------------|:------|
+| both correct      | 8,351           | 83.5% |
+| only SVM correct  | 515             | 5.1%  |
+| only BERT correct | 259             | 2.6%  |
+| both wrong        | 875             | 8.8%  |
+
+The SVM is the better model here, clearly so on macro-F1: the fine-tuned
+network is weaker on small and confusable classes.
+
+### Where they differ
+
+<img src="../figures/14_per_class.png" width="75%" />
+
+The SVM has the higher F1 on 68 of 100 classes, the transformer on 25.
+Both find the same classes hard (correlation of per-class F1 0.96), but
+the transformer collapses on some rare or near-synonymous ones — it
+never correctly predicts *Applicable Laws* or *Assigns*.
+
+![](../figures/14_slices.png)<!-- -->
+
+The gap is not uniform. On provisions unlike anything in the training
+data (similarity below 0.4) the two models are tied (75.7% vs 75.2%).
+The SVM’s lead comes from familiar boilerplate, where exact n-gram
+matches are decisive, and from the longest provisions, which the
+transformer only reads up to 256 word pieces (12% of provisions are
+truncated).
+
+### Do they complement each other?
+
+![](../figures/14_ensemble.png)<!-- -->
+
+Only a little. A weighted average of the two models’ probabilities
+(temperatures and weight fitted on validation) improves on the SVM by
++0.22 pp accuracy (95% interval +0.03 pp to +0.42 pp), with no reliable
+change in macro-F1. At least one of the two models is right on 91.2% of
+test provisions, so their errors overlap heavily.
+
+![](../figures/14_confidence.png)<!-- -->
+
+The transformer’s temperature-scaled probabilities are better calibrated
+(expected calibration error 0.8% vs 4.1% for the SVM’s soft-maxed
+margins). For deciding which predictions to trust, the SVM’s confidence
+ranking is at least as good.
+
+### Cost
+
+| Model                         | Parameters | Training time | Time to score 10,000 provisions | Hardware    |
+|:------------------------------|:-----------|:--------------|:--------------------------------|:------------|
+| TF-IDF + linear SVM           | 21,619,300 | 2.6 min       | 4 s                             | 1 CPU core  |
+| Legal-BERT-small (fine-tuned) | 35,119,716 | 176.9 min     | 109 s                           | 4 CPU cores |
+
+(The SVM training time is the measured cross-validation fit time scaled
+to the full training split.)
+
+**Takeaway.** With the data and hardware available here, the sparse
+linear model is more accurate, about 68 times cheaper to train and about
+29 times faster to apply. That is not a general verdict on transformers
+for this task: larger published models trained for longer on GPUs reach
+88.2–88.6% accuracy, level with the SVM. Taken together, the evidence
+suggests that on LEDGAR a pretrained encoder needs far more compute to
+match a well-tuned bag of n-grams, and does not clearly beat it even
+then.
+
+## 8. Limitations
 
 - Test accuracy describes filings from the period right after the
   training data. Performance on later or structurally different

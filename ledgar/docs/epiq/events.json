@@ -1449,5 +1449,282 @@
    "rank": "ffffdfffffffffffffffffff"
   },
   "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1F3PDJ48EN9FY1NTF87R",
+  "action": "add.issue",
+  "payload": {
+   "id": "ADZ558Q",
+   "parent": "8MBKBKK",
+   "name": "Fine-tuning setup: choose an open-source pretrained model that is trainable on 4 CPUs",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1F3RQ1NRPCKY02W4V1E7",
+  "action": "edit.description",
+  "payload": {
+   "id": "ADZ558Q",
+   "md": "No GPU in this environment. Candidates: Legal-BERT-small (legal-domain, 35M params), MiniLM, DistilBERT. Benchmark throughput, fix the budget."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1F3S9B7CTX4JQJYECTB5",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "ADZ558Q",
+   "tag": "QZY7PNX"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1F4A8D409NE014KJPKBS",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "ADZ558Q",
+   "goal": "FNRTKKT"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1FP7H7F4EXJMYYTTSANX",
+  "action": "add.issue",
+  "payload": {
+   "id": "3HSD0VG",
+   "parent": "8MBKBKK",
+   "name": "Fine-tune the transformer on LEDGAR train, select on validation",
+   "rank": "bfffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1FP9PMXVRK3VKVP0SABC",
+  "action": "edit.description",
+  "payload": {
+   "id": "3HSD0VG",
+   "md": "Train split only for weights; validation for epoch/hyper-parameter selection; test untouched until frozen."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1FPA9ZT1HCM9MA9VV20Q",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "3HSD0VG",
+   "tag": "Z1D09E6"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1FPDECHA1ZWKT44KE891",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "3HSD0VG",
+   "goal": "FNRTKKT"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1G6YWRR7ZBBHAK3N2TMZ",
+  "action": "add.issue",
+  "payload": {
+   "id": "52P1MWY",
+   "parent": "8MBKBKK",
+   "name": "Compare fine-tuned transformer with the TF-IDF + SVM model on test",
+   "rank": "dfffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1G6ZXP66DY8SDCRB99AJ",
+  "action": "edit.description",
+  "payload": {
+   "id": "52P1MWY",
+   "md": "Same test rows, same metrics (provisionr), bootstrap CIs, paired test, per-class and agreement analysis, cost."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1G703STRT4MPFVFHDACW",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "52P1MWY",
+   "tag": "ZR49M5P"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1G74BZBEQBFH1DJPKWV7",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "52P1MWY",
+   "goal": "FNRTKKT"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1GSHDTEBPNJWPC2G8ZWK",
+  "action": "add.issue",
+  "payload": {
+   "id": "E9PHFDQ",
+   "parent": "8MBKBKK",
+   "name": "Update report and README with the transformer comparison",
+   "rank": "efffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1GSJZ6R1P8W00Z4F1DTC",
+  "action": "edit.description",
+  "payload": {
+   "id": "E9PHFDQ",
+   "md": "Add a section to the report."
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1GSKJR29XAYPXAD5P8JT",
+  "action": "add.issue.tag",
+  "payload": {
+   "id": "E9PHFDQ",
+   "tag": "G3QMQT1"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KJ1GSP7BYRCSKQN0MZACA1",
+  "action": "add.issue.goal",
+  "payload": {
+   "id": "E9PHFDQ",
+   "goal": "FNRTKKT"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KKBGTYJJB2E6CEYJ12R8N9",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "JASJ7WQ",
+   "issue": "ADZ558Q",
+   "md": "No GPU, 4 CPUs. Throughput: Legal-BERT-small 22 rows/s @128 tokens (45 min/epoch), 15 rows/s @256; Legal-BERT-base 6 rows/s (2.6 h/epoch) -> infeasible. Chosen: nlpaueb/legal-bert-small-uncased (35M params, legal-domain pretraining, CC-BY-SA-4.0). Fine-tuning in Python/PyTorch (R torch needs a blocked download host); evaluation stays in R with provisionr.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KKBGV65Y66P8J0ZYXX0868",
+  "action": "move.node",
+  "payload": {
+   "id": "ADZ558Q",
+   "parent": "8MBKBKN",
+   "rank": "ffffefffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KKBHERREKS3C4K5BFJ1R05",
+  "action": "move.node",
+  "payload": {
+   "id": "3HSD0VG",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7KQESEH1FSRX7H06QMYD646",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "ZXCWE7N",
+   "issue": "3HSD0VG",
+   "md": "Pilot (6k train / 2k val, 3 epochs): lr 5e-5 74.1% | 1e-4 79.5% | 2e-4 80.2% | 4e-4 78.9% (all 128 tokens); lr 2e-4 @ 256 tokens 81.1%. Full run launched with lr 2e-4, 256 tokens, 3 epochs.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7M2CP2KAGDWSP1DVGVTRGTS",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "K99TFMM",
+   "issue": "3HSD0VG",
+   "md": "Full run done in 177 min on 4 CPUs. Validation accuracy 80.9% -> 84.1% -> 85.8% over 3 epochs (macro-F1 68.7 -> 74.8 -> 77.5); epoch 3 selected; still improving, i.e. not converged within the CPU budget.",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7M2CP2WCJTEPVPMTVEBHBKQ",
+  "action": "move.node",
+  "payload": {
+   "id": "3HSD0VG",
+   "parent": "8MBKBKN",
+   "rank": "fffff7ffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7M2CPKWJMFDM1FTGTFWPJYD",
+  "action": "move.node",
+  "payload": {
+   "id": "52P1MWY",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7M2CQBH8DWGZY6QYSJ7GTQJ",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "YQQDYRK",
+   "issue": "52P1MWY",
+   "md": "Test, train-only fits: **SVM 88.7% / 83.6% vs Legal-BERT-small 86.1% / 78.1%** (acc / macro-F1); paired difference -2.56pp [-3.11, -2.01] and -5.47pp [-6.51, -4.41]; McNemar p=2e-20. Tied on unfamiliar text; SVM wins on boilerplate and long provisions. Ensemble +0.22pp. BERT better calibrated (ECE 0.8% vs 4.1%). BERT costs ~68x the training time. Caveat: BERT not converged (CPU budget).",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7M2CQBTMKQXTQQJ3CC14JNA",
+  "action": "move.node",
+  "payload": {
+   "id": "52P1MWY",
+   "parent": "8MBKBKN",
+   "rank": "fffffbffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7M2CQVZJT7VG1Y7P5BH651J",
+  "action": "move.node",
+  "payload": {
+   "id": "E9PHFDQ",
+   "parent": "8MBKBKM",
+   "rank": "7fffffffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7M2CREQKZBQN6CW7JAM4A89",
+  "action": "add.issue.comment",
+  "payload": {
+   "id": "4AFB7VX",
+   "issue": "E9PHFDQ",
+   "md": "Report section 7 + summary paragraph added; README documents the transformer workflow (venv, pilot, full run, make 14).",
+   "author": "GQGZH35"
+  },
+  "userId": "GQGZH35"
+ },
+ {
+  "id": "01M7M2CRF0G5DWA86HE93H7AV4",
+  "action": "move.node",
+  "payload": {
+   "id": "E9PHFDQ",
+   "parent": "8MBKBKN",
+   "rank": "fffffdffffffffffffffffff"
+  },
+  "userId": "GQGZH35"
  }
 ]

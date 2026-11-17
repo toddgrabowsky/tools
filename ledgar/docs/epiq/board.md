@@ -14,6 +14,7 @@ Exported from the [epiq](https://github.com/ljtn/epiq) event log with `tools/epi
 | 5 Model | 5 / 5 |
 | 6 Validate | 5 / 5 |
 | 7 Package | 2 / 2 |
+| 8 Transformer | 4 / 4 |
 
 ## Tickets
 
@@ -38,6 +39,10 @@ Exported from the [epiq](https://github.com/ljtn/epiq) event log with `tools/epi
 | `R1ATBW1` | Done | 6 Validate | validation, finding | Quantify temporal drift: does random CV overstate out-of-time performance? |
 | `NW0W1WT` | Done | 6 Validate | validation, finding | Grouped CV: do near-duplicate templates inflate the CV estimate? |
 | `XJBFAME` | Done | 5 Model | modelling, finding | Ablation follow-up: are block comparisons confounded by effective regularisation? |
+| `ADZ558Q` | Done | 8 Transformer | setup | Fine-tuning setup: choose an open-source pretrained model that is trainable on 4 CPUs |
+| `3HSD0VG` | Done | 8 Transformer | modelling | Fine-tune the transformer on LEDGAR train, select on validation |
+| `52P1MWY` | Done | 8 Transformer | validation | Compare fine-tuned transformer with the TF-IDF + SVM model on test |
+| `E9PHFDQ` | Done | 8 Transformer | docs | Update report and README with the transformer comparison |
 
 ### `5CJRS49` Bootstrap project: R toolchain, repo layout, epiq board
 
@@ -194,3 +199,37 @@ Raised by 7K7TEH9. Adding a unit-norm block rescales document vectors (norm sqrt
 > **claude/ada**: Result (20k subsample, 5-fold): the screening verdict on the head block was a confound. Accuracy by C (0.3 / 1 / 3): word only 83.4 / 83.9 / 83.8; +head w=1 83.7 / 83.7 / 83.4; **+head w=0.5 84.0 / 84.5 / 84.3**; +head w=0.25 83.6 / 84.2 / 84.1; +stats ~ no change; +char w=0.5 83.5 / 84.1 / 83.9 (not worth 4x compute). Next: tune head block design (words, n-gram range) then confirm on the full training split.
 
 > **claude/ada**: Confirmed on full train (same folds as baselines): word 1-2 + head(w=0.5, first 20 words) -> **87.9% acc / 82.5% macro-F1** vs 87.3 / 81.6 for words alone; +stats adds nothing. Selected feature set recorded in chosen_spec(). Lesson: compare feature blocks only with regularisation re-tuned.
+
+### `ADZ558Q` Fine-tuning setup: choose an open-source pretrained model that is trainable on 4 CPUs
+
+*Opened 2026-11-17 01:30 UTC — lane: Done*
+
+No GPU in this environment. Candidates: Legal-BERT-small (legal-domain, 35M params), MiniLM, DistilBERT. Benchmark throughput, fix the budget.
+
+> **claude/ada**: No GPU, 4 CPUs. Throughput: Legal-BERT-small 22 rows/s @128 tokens (45 min/epoch), 15 rows/s @256; Legal-BERT-base 6 rows/s (2.6 h/epoch) -> infeasible. Chosen: nlpaueb/legal-bert-small-uncased (35M params, legal-domain pretraining, CC-BY-SA-4.0). Fine-tuning in Python/PyTorch (R torch needs a blocked download host); evaluation stays in R with provisionr.
+
+### `3HSD0VG` Fine-tune the transformer on LEDGAR train, select on validation
+
+*Opened 2026-11-17 01:30 UTC — lane: Done*
+
+Train split only for weights; validation for epoch/hyper-parameter selection; test untouched until frozen.
+
+> **claude/ada**: Pilot (6k train / 2k val, 3 epochs): lr 5e-5 74.1% | 1e-4 79.5% | 2e-4 80.2% | 4e-4 78.9% (all 128 tokens); lr 2e-4 @ 256 tokens 81.1%. Full run launched with lr 2e-4, 256 tokens, 3 epochs.
+
+> **claude/ada**: Full run done in 177 min on 4 CPUs. Validation accuracy 80.9% -> 84.1% -> 85.8% over 3 epochs (macro-F1 68.7 -> 74.8 -> 77.5); epoch 3 selected; still improving, i.e. not converged within the CPU budget.
+
+### `52P1MWY` Compare fine-tuned transformer with the TF-IDF + SVM model on test
+
+*Opened 2026-11-17 01:30 UTC — lane: Done*
+
+Same test rows, same metrics (provisionr), bootstrap CIs, paired test, per-class and agreement analysis, cost.
+
+> **claude/ada**: Test, train-only fits: **SVM 88.7% / 83.6% vs Legal-BERT-small 86.1% / 78.1%** (acc / macro-F1); paired difference -2.56pp [-3.11, -2.01] and -5.47pp [-6.51, -4.41]; McNemar p=2e-20. Tied on unfamiliar text; SVM wins on boilerplate and long provisions. Ensemble +0.22pp. BERT better calibrated (ECE 0.8% vs 4.1%). BERT costs ~68x the training time. Caveat: BERT not converged (CPU budget).
+
+### `E9PHFDQ` Update report and README with the transformer comparison
+
+*Opened 2026-11-17 01:30 UTC — lane: Done*
+
+Add a section to the report.
+
+> **claude/ada**: Report section 7 + summary paragraph added; README documents the transformer workflow (venv, pilot, full run, make 14).
